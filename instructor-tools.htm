@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Instructor Tools - SkillStream E-Learning Platform</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; }
+        body { background-color: #fefefe; color: #5a5a5a; line-height: 1.6; }
+        .container { max-width: 1200px; margin: 0 auto; padding: 0 20px; }
+        
+        header { background: linear-gradient(135deg, #f8f5f0 0%, #e8e0d5 100%); color: #6b625c; padding: 60px 0; text-align: center; border-bottom: 1px solid #e0d9d0; }
+        .header-content h1 { font-size: 2.5rem; margin-bottom: 15px; color: #8b7d6b; font-weight: 300; }
+        .header-content p { font-size: 1.2rem; margin-bottom: 25px; color: #7a6f63; }
+        .btn { display: inline-block; background: #c8b8a5; color: #fff; padding: 12px 30px; border-radius: 25px; text-decoration: none; font-weight: bold; transition: all 0.3s ease; border: 2px solid #c8b8a5; }
+        .btn:hover { background: transparent; color: #c8b8a5; transform: translateY(-2px); }
+        
+        nav { background: #fff; padding: 20px 0; box-shadow: 0 2px 10px rgba(0,0,0,0.1); }
+        .nav-links { display: flex; justify-content: center; list-style: none; flex-wrap: wrap; gap: 15px; }
+        .nav-links a { text-decoration: none; color: #8b7d6b; padding: 10px 20px; border-radius: 25px; transition: all 0.3s ease; }
+        .nav-links a:hover { background: #f8f5f0; color: #7a6a58; }
+        
+        .instructor-content { padding: 60px 0; background: #fcfaf7; }
+        .section-title { text-align: center; margin-bottom: 40px; font-size: 2rem; color: #8b7d6b; }
+        .instructor-intro { text-align: center; max-width: 800px; margin: 0 auto 50px; color: #7a6f63; font-size: 1.1rem; line-height: 1.8; }
+        
+        .tools-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)); gap: 30px; margin-bottom: 50px; }
+        .tool-card { background: white; padding: 30px; border-radius: 10px; box-shadow: 0 5px 15px rgba(0,0,0,0.1); transition: transform 0.3s ease; text-align: center; }
+        .tool-card:hover { transform: translateY(-5px); }
+        .tool-icon { font-size: 3rem; margin-bottom: 20px; }
+        .tool-card h3 { color: #8b7d6b; margin-bottom: 15px; font-size: 1.4rem; }
+        
+        .features-section { background: white; padding: 50px 0; }
+        .features-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 25px; }
+        .feature-item { background: #f8f5f0; padding: 25px; border-radius: 8px; border-left: 4px solid #c8b8a5; }
+        .feature-item h4 { color: #8b7d6b; margin-bottom: 10px; font-size: 1.2rem; }
+        
+        .resources-section { padding: 60px 0; background: #fcfaf7; }
+        .resources-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 25px; }
+        .resource-item { text-align: center; padding: 30px 20px; background: white; border-radius: 8px; box-shadow: 0 3px 10px rgba(0,0,0,0.1); transition: all 0.3s ease; }
+        .resource-item:hover { transform: translateY(-5px); box-shadow: 0 5px 15px rgba(0,0,0,0.15); }
+        .resource-item h4 { color: #8b7d6b; margin-bottom: 10px; }
+        
+        footer { background: #8b7d6b; color: #f8f5f0; text-align: center; padding: 30px 0; margin-top: 50px; }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="header-content">
+                <h1>Instructor Tools</h1>
+                <p>Comprehensive resources and tools for educators and instructors</p>
+                <a href="contact.htm" class="btn">Become an Instructor</a>
+            </div>
+        </div>
+    </header>
+
+    <nav>
+        <div class="container">
+            <ul class="nav-links">
+                <li><a href="index.htm">Home</a></li>
+                <li><a href="tips.htm">Tips & Tricks</a></li>
+                <li><a href="problems.htm">Problem-Solving</a></li>
+                <li><a href="catalog.htm">Course Catalog</a></li>
+                <li><a href="about.htm">About Us</a></li>
+                <li><a href="contact.htm">Contact Support</a></li>
+                <li><a href="admin.htm">Admin</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <section class="instructor-content">
+        <div class="container">
+            <h2 class="section-title">Teaching & Course Management Tools</h2>
+            
+            <div class="instructor-intro">
+                <p>Access powerful tools and resources designed specifically for educators to create, manage, and deliver exceptional learning experiences.</p>
+            </div>
+
+            <div class="tools-grid">
+                <div class="tool-card">
+                    <div class="tool-icon">📚</div>
+                    <h3>Course Builder</h3>
+                    <p>Create engaging courses with our intuitive course builder. Add modules, lessons, quizzes, and multimedia content with drag-and-drop simplicity.</p>
+                    <a href="#" class="btn" style="margin-top: 15px; display: inline-block;">Start Building</a>
+                </div>
+                
+                <div class="tool-card">
+                    <div class="tool-icon">📊</div>
+                    <h3>Analytics Dashboard</h3>
+                    <p>Track student progress, engagement metrics, and course performance with detailed analytics and reporting tools.</p>
+                    <a href="#" class="btn" style="margin-top: 15px; display: inline-block;">View Analytics</a>
+                </div>
+                
+                <div class="tool-card">
+                    <div class="tool-icon">🎯</div>
+                    <h3>Assessment Creator</h3>
+                    <p>Design custom quizzes, assignments, and exams with various question types and automatic grading features.</p>
+                    <a href="#" class="btn" style="margin-top: 15px; display: inline-block;">Create Assessment</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="features-section">
+        <div class="container">
+            <h2 class="section-title">Instructor Features</h2>
+            <div class="features-grid">
+                <div class="feature-item">
+                    <h4>Student Management</h4>
+                    <p>Track student enrollment, progress, and performance with comprehensive management tools.</p>
+                </div>
+                
+                <div class="feature-item">
+                    <h4>Communication Tools</h4>
+                    <p>Engage with students through announcements, discussions, and direct messaging features.</p>
+                </div>
+                
+                <div class="feature-item">
+                    <h4>Content Library</h4>
+                    <p>Access and reuse teaching materials from our extensive content library and templates.</p>
+                </div>
+                
+                <div class="feature-item">
+                    <h4>Grading System</h4>
+                    <p>Efficiently grade assignments and provide feedback with our streamlined grading tools.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="resources-section">
+        <div class="container">
+            <h2 class="section-title">Teaching Resources</h2>
+            <div class="resources-grid">
+                <div class="resource-item">
+                    <h4>Lesson Templates</h4>
+                    <p>Professional templates for course structure and lesson planning</p>
+                    <a href="resources.htm" class="btn" style="margin-top: 10px; display: inline-block;">Download</a>
+                </div>
+                
+                <div class="resource-item">
+                    <h4>Teaching Guides</h4>
+                    <p>Best practices and methodologies for effective online teaching</p>
+                    <a href="resources.htm" class="btn" style="margin-top: 10px; display: inline-block;">Read Guides</a>
+                </div>
+                
+                <div class="resource-item">
+                    <h4>Multimedia Resources</h4>
+                    <p>Access to images, videos, and interactive content for courses</p>
+                    <a href="resources.htm" class="btn" style="margin-top: 10px; display: inline-block;">Browse Library</a>
+                </div>
+                
+                <div class="resource-item">
+                    <h4>Community Forum</h4>
+                    <p>Connect with other instructors and share experiences</p>
+                    <a href="contact.htm" class="btn" style="margin-top: 10px; display: inline-block;">Join Community</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 SkillStream E-Learning Platform. All rights reserved.</p>
+            <p>Empowering educators to create transformative learning experiences</p>
+        </div>
+    </footer>
+</body>
+</html>
