@@ -1,0 +1,423 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Learning Motivation Tips - SkillStream E-Learning Platform</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        
+        body {
+            background-color: #fefefe;
+            color: #5a5a5a;
+            line-height: 1.6;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        /* Header Styles */
+        header {
+            background: linear-gradient(135deg, #f8f5f0 0%, #e8e0d5 100%);
+            color: #6b625c;
+            padding: 60px 0;
+            text-align: center;
+            border-bottom: 1px solid #e0d9d0;
+        }
+        
+        .header-content h1 {
+            font-size: 2.5rem;
+            margin-bottom: 15px;
+            color: #8b7d6b;
+            font-weight: 300;
+        }
+        
+        .header-content p {
+            font-size: 1.2rem;
+            margin-bottom: 25px;
+            color: #7a6f63;
+        }
+        
+        .btn {
+            display: inline-block;
+            background: #c8b8a5;
+            color: #fff;
+            padding: 12px 30px;
+            border-radius: 25px;
+            text-decoration: none;
+            font-weight: bold;
+            transition: all 0.3s ease;
+            border: 2px solid #c8b8a5;
+        }
+        
+        .btn:hover {
+            background: transparent;
+            color: #c8b8a5;
+            transform: translateY(-2px);
+        }
+        
+        /* Navigation */
+        nav {
+            background: #fff;
+            padding: 20px 0;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        
+        .nav-links {
+            display: flex;
+            justify-content: center;
+            list-style: none;
+            flex-wrap: wrap;
+            gap: 15px;
+        }
+        
+        .nav-links a {
+            text-decoration: none;
+            color: #8b7d6b;
+            padding: 10px 20px;
+            border-radius: 25px;
+            transition: all 0.3s ease;
+        }
+        
+        .nav-links a:hover {
+            background: #f8f5f0;
+            color: #7a6a58;
+        }
+        
+        /* Motivation Content */
+        .motivation-content {
+            padding: 60px 0;
+            background: #fcfaf7;
+        }
+        
+        .section-title {
+            text-align: center;
+            margin-bottom: 40px;
+            font-size: 2rem;
+            color: #8b7d6b;
+        }
+        
+        .motivation-intro {
+            text-align: center;
+            max-width: 800px;
+            margin: 0 auto 50px;
+            color: #7a6f63;
+            font-size: 1.1rem;
+            line-height: 1.8;
+        }
+        
+        /* Motivation Strategies */
+        .strategies-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 30px;
+            margin-bottom: 50px;
+        }
+        
+        .strategy-card {
+            background: white;
+            padding: 40px 30px;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease;
+            text-align: center;
+        }
+        
+        .strategy-card:hover {
+            transform: translateY(-5px);
+        }
+        
+        .strategy-icon {
+            font-size: 3rem;
+            margin-bottom: 20px;
+        }
+        
+        .strategy-card h3 {
+            color: #8b7d6b;
+            margin-bottom: 15px;
+            font-size: 1.4rem;
+        }
+        
+        .strategy-card p {
+            color: #666;
+            line-height: 1.7;
+        }
+        
+        /* Daily Motivation */
+        .daily-motivation {
+            background: white;
+            padding: 50px 0;
+        }
+        
+        .motivation-tips {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 25px;
+        }
+        
+        .tip-item {
+            background: #f8f5f0;
+            padding: 25px;
+            border-radius: 8px;
+            border-left: 4px solid #c8b8a5;
+        }
+        
+        .tip-item h4 {
+            color: #8b7d6b;
+            margin-bottom: 10px;
+            font-size: 1.2rem;
+        }
+        
+        /* Success Stories */
+        .success-stories {
+            padding: 60px 0;
+            background: #fcfaf7;
+        }
+        
+        .stories-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+        
+        .story-card {
+            background: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+        
+        .story-quote {
+            font-style: italic;
+            color: #7a6f63;
+            margin-bottom: 15px;
+            line-height: 1.7;
+        }
+        
+        .story-author {
+            color: #8b7d6b;
+            font-weight: 500;
+        }
+        
+        /* Goal Setting */
+        .goal-setting {
+            background: white;
+            padding: 50px 0;
+        }
+        
+        .goal-form {
+            background: #f8f5f0;
+            padding: 40px;
+            border-radius: 10px;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+        
+        .form-group {
+            margin-bottom: 20px;
+        }
+        
+        .form-group label {
+            display: block;
+            margin-bottom: 8px;
+            color: #8b7d6b;
+            font-weight: 500;
+        }
+        
+        .form-group input,
+        .form-group textarea {
+            width: 100%;
+            padding: 12px 15px;
+            border: 1px solid #e0d9d0;
+            border-radius: 8px;
+            font-size: 1rem;
+            transition: border-color 0.3s ease;
+        }
+        
+        .form-group input:focus,
+        .form-group textarea:focus {
+            outline: none;
+            border-color: #c8b8a5;
+        }
+        
+        .form-group textarea {
+            height: 100px;
+            resize: vertical;
+        }
+        
+        .submit-btn {
+            background: #a89987;
+            border-color: #a89987;
+            width: 100%;
+            padding: 15px;
+            font-size: 1.1rem;
+        }
+        
+        /* Footer */
+        footer {
+            background: #8b7d6b;
+            color: #f8f5f0;
+            text-align: center;
+            padding: 30px 0;
+            margin-top: 50px;
+        }
+    </style>
+</head>
+<body>
+    <!-- Header Section -->
+    <header>
+        <div class="container">
+            <div class="header-content">
+                <h1>Learning Motivation Tips</h1>
+                <p>Stay inspired and maintain momentum throughout your learning journey</p>
+                <a href="study-time.htm" class="btn">Plan Your Learning</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Navigation -->
+    <nav>
+        <div class="container">
+            <ul class="nav-links">
+                <li><a href="index.htm">Home</a></li>
+                <li><a href="tips.htm">Tips & Tricks</a></li>
+                <li><a href="problems.htm">Problem-Solving</a></li>
+                <li><a href="catalog.htm">Course Catalog</a></li>
+                <li><a href="about.htm">About Us</a></li>
+                <li><a href="contact.htm">Contact Support</a></li>
+                <li><a href="admin.htm">Admin</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Motivation Content Section -->
+    <section class="motivation-content">
+        <div class="container">
+            <h2 class="section-title">Stay Motivated & Achieve Your Goals</h2>
+            
+            <div class="motivation-intro">
+                <p>Learning new skills is an exciting journey, but maintaining motivation can be challenging. Discover proven strategies to stay inspired, overcome obstacles, and celebrate your progress along the way.</p>
+            </div>
+
+            <div class="strategies-grid">
+                <div class="strategy-card">
+                    <div class="strategy-icon">🎯</div>
+                    <h3>Set Clear Goals</h3>
+                    <p>Define specific, measurable objectives for your learning journey. Break large goals into smaller, achievable milestones to maintain momentum and track progress.</p>
+                </div>
+                
+                <div class="strategy-card">
+                    <div class="strategy-icon">🏆</div>
+                    <h3>Celebrate Small Wins</h3>
+                    <p>Acknowledge and reward yourself for every achievement, no matter how small. Each completed lesson or understood concept is a step toward mastery.</p>
+                </div>
+                
+                <div class="strategy-card">
+                    <div class="strategy-icon">🔄</div>
+                    <h3>Embrace the Process</h3>
+                    <p>Understand that learning involves challenges and setbacks. View obstacles as opportunities for growth rather than reasons to give up.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Daily Motivation Section -->
+    <section class="daily-motivation">
+        <div class="container">
+            <h2 class="section-title">Daily Motivation Strategies</h2>
+            <div class="motivation-tips">
+                <div class="tip-item">
+                    <h4>Morning Learning Routine</h4>
+                    <p>Start your day with 15-30 minutes of learning when your mind is fresh and focused.</p>
+                </div>
+                
+                <div class="tip-item">
+                    <h4>Progress Visualization</h4>
+                    <p>Use charts or journals to visually track your learning progress and see how far you've come.</p>
+                </div>
+                
+                <div class="tip-item">
+                    <h4>Learning Community</h4>
+                    <p>Join study groups or online communities to share experiences and stay accountable.</p>
+                </div>
+                
+                <div class="tip-item">
+                    <h4>Mindset Shift</h4>
+                    <p>Replace "I have to learn" with "I get to learn" to cultivate a positive learning attitude.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Success Stories Section -->
+    <section class="success-stories">
+        <div class="container">
+            <h2 class="section-title">Success Stories</h2>
+            <div class="stories-grid">
+                <div class="story-card">
+                    <p class="story-quote">"I started with zero coding knowledge and within 6 months, I built my first web application. The consistent daily practice and celebrating small wins kept me going!"</p>
+                    <p class="story-author">- Amirah Nabilah, Web Developer</p>
+                </div>
+                
+                <div class="story-card">
+                    <p class="story-quote">"Balancing work and learning was tough, but setting clear weekly goals and tracking my progress made all the difference. Now I'm leading development projects!"</p>
+                    <p class="story-author">- Azim Adam, Software Engineer</p>
+                </div>
+                
+                <div class="story-card">
+                    <p class="story-quote">"The learning community support and regular milestone celebrations helped me stay motivated through challenging concepts. Never give up on your learning journey!"</p>
+                    <p class="story-author">- Arissa Khairani, UX Designer</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Goal Setting Section -->
+    <section class="goal-setting">
+        <div class="container">
+            <h2 class="section-title">Set Your Learning Goals</h2>
+            <div class="goal-form">
+                <form>
+                    <div class="form-group">
+                        <label for="goal-title">Goal Title</label>
+                        <input type="text" id="goal-title" placeholder="e.g., Master JavaScript Fundamentals">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="goal-description">Goal Description</label>
+                        <textarea id="goal-description" placeholder="Describe what you want to achieve and why it's important to you..."></textarea>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="target-date">Target Completion Date</label>
+                        <input type="date" id="target-date">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="milestones">Key Milestones</label>
+                        <textarea id="milestones" placeholder="List the main steps or milestones to reach your goal..."></textarea>
+                    </div>
+                    
+                    <button type="button" class="btn submit-btn">Save My Goal</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 SkillStream E-Learning Platform. All rights reserved.</p>
+            <p>Your motivation is the fuel for your learning success</p>
+        </div>
+    </footer>
+</body>
+</html>
