@@ -1,0 +1,495 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Troubleshooting Learning Issues - SkillStream E-Learning Platform</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        
+        body {
+            background-color: #fefefe;
+            color: #5a5a5a;
+            line-height: 1.6;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        /* Header Styles */
+        header {
+            background: linear-gradient(135deg, #f8f5f0 0%, #e8e0d5 100%);
+            color: #6b625c;
+            padding: 60px 0;
+            text-align: center;
+            border-bottom: 1px solid #e0d9d0;
+        }
+        
+        .header-content h1 {
+            font-size: 2.5rem;
+            margin-bottom: 15px;
+            color: #8b7d6b;
+            font-weight: 300;
+        }
+        
+        .header-content p {
+            font-size: 1.2rem;
+            margin-bottom: 25px;
+            color: #7a6f63;
+        }
+        
+        .btn {
+            display: inline-block;
+            background: #c8b8a5;
+            color: #fff;
+            padding: 12px 30px;
+            border-radius: 25px;
+            text-decoration: none;
+            font-weight: bold;
+            transition: all 0.3s ease;
+            border: 2px solid #c8b8a5;
+        }
+        
+        .btn:hover {
+            background: transparent;
+            color: #c8b8a5;
+            transform: translateY(-2px);
+        }
+        
+        /* Navigation */
+        nav {
+            background: #fff;
+            padding: 20px 0;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        
+        .nav-links {
+            display: flex;
+            justify-content: center;
+            list-style: none;
+            flex-wrap: wrap;
+            gap: 15px;
+        }
+        
+        .nav-links a {
+            text-decoration: none;
+            color: #8b7d6b;
+            padding: 10px 20px;
+            border-radius: 25px;
+            transition: all 0.3s ease;
+        }
+        
+        .nav-links a:hover {
+            background: #f8f5f0;
+            color: #7a6a58;
+        }
+        
+        /* Learning Issues Content */
+        .issues-content {
+            padding: 60px 0;
+            background: #fcfaf7;
+        }
+        
+        .section-title {
+            text-align: center;
+            margin-bottom: 40px;
+            font-size: 2rem;
+            color: #8b7d6b;
+        }
+        
+        .issues-intro {
+            text-align: center;
+            max-width: 800px;
+            margin: 0 auto 50px;
+            color: #7a6f63;
+            font-size: 1.1rem;
+            line-height: 1.8;
+        }
+        
+        /* Common Issues Grid */
+        .issues-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 30px;
+            margin-bottom: 50px;
+        }
+        
+        .issue-card {
+            background: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease;
+            border-left: 4px solid #c8b8a5;
+        }
+        
+        .issue-card:hover {
+            transform: translateY(-5px);
+        }
+        
+        .issue-card h3 {
+            color: #8b7d6b;
+            margin-bottom: 15px;
+            font-size: 1.3rem;
+        }
+        
+        .solution-list {
+            list-style: none;
+            margin: 15px 0;
+        }
+        
+        .solution-list li {
+            padding: 8px 0;
+            border-bottom: 1px solid #f0f0f0;
+            position: relative;
+            padding-left: 25px;
+        }
+        
+        .solution-list li:before {
+            content: "💡";
+            position: absolute;
+            left: 0;
+        }
+        
+        .solution-list li:last-child {
+            border-bottom: none;
+        }
+        
+        /* Quick Fix Section */
+        .quick-fix {
+            background: white;
+            padding: 50px 0;
+        }
+        
+        .fix-steps {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        
+        .fix-step {
+            display: flex;
+            align-items: flex-start;
+            margin-bottom: 25px;
+            padding: 20px;
+            background: #f8f5f0;
+            border-radius: 8px;
+        }
+        
+        .step-number {
+            background: #c8b8a5;
+            color: white;
+            width: 35px;
+            height: 35px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            margin-right: 20px;
+            flex-shrink: 0;
+        }
+        
+        .step-content h4 {
+            color: #8b7d6b;
+            margin-bottom: 8px;
+        }
+        
+        /* Prevention Tips */
+        .prevention-tips {
+            padding: 60px 0;
+            background: #fcfaf7;
+        }
+        
+        .tips-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 25px;
+        }
+        
+        .tip-item {
+            background: white;
+            padding: 25px;
+            border-radius: 8px;
+            box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+            text-align: center;
+        }
+        
+        .tip-icon {
+            font-size: 2.5rem;
+            margin-bottom: 15px;
+        }
+        
+        .tip-item h4 {
+            color: #8b7d6b;
+            margin-bottom: 10px;
+        }
+        
+        /* Support Resources */
+        .support-resources {
+            background: white;
+            padding: 50px 0;
+        }
+        
+        .resources-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+        }
+        
+        .resource-item {
+            text-align: center;
+            padding: 30px 20px;
+            background: #f8f5f0;
+            border-radius: 8px;
+            transition: all 0.3s ease;
+        }
+        
+        .resource-item:hover {
+            background: #e8e0d5;
+            transform: translateY(-3px);
+        }
+        
+        .resource-item h4 {
+            color: #8b7d6b;
+            margin-bottom: 10px;
+        }
+        
+        /* Footer */
+        footer {
+            background: #8b7d6b;
+            color: #f8f5f0;
+            text-align: center;
+            padding: 30px 0;
+            margin-top: 50px;
+        }
+    </style>
+</head>
+<body>
+    <!-- Header Section -->
+    <header>
+        <div class="container">
+            <div class="header-content">
+                <h1>Troubleshooting Learning Issues</h1>
+                <p>Overcome common learning challenges and get back on track with your studies</p>
+                <a href="contact.htm" class="btn">Get Personalized Help</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Navigation -->
+    <nav>
+        <div class="container">
+            <ul class="nav-links">
+                <li><a href="index.htm">Home</a></li>
+                <li><a href="tips.htm">Tips & Tricks</a></li>
+                <li><a href="problems.htm">Problem-Solving</a></li>
+                <li><a href="catalog.htm">Course Catalog</a></li>
+                <li><a href="about.htm">About Us</a></li>
+                <li><a href="contact.htm">Contact Support</a></li>
+                <li><a href="admin.htm">Admin</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Learning Issues Content Section -->
+    <section class="issues-content">
+        <div class="container">
+            <h2 class="section-title">Common Learning Challenges & Solutions</h2>
+            
+            <div class="issues-intro">
+                <p>Every learner faces obstacles from time to time. Discover practical solutions to common learning issues and get the support you need to continue your educational journey successfully.</p>
+            </div>
+
+            <div class="issues-grid">
+                <div class="issue-card">
+                    <h3>Difficulty Understanding Concepts</h3>
+                    <p>Struggling to grasp complex topics or technical concepts?</p>
+                    
+                    <ul class="solution-list">
+                        <li>Break concepts into smaller, manageable parts</li>
+                        <li>Use different learning resources (videos, articles, exercises)</li>
+                        <li>Practice with real-world examples</li>
+                        <li>Join study groups for peer support</li>
+                        <li>Review foundational knowledge first</li>
+                    </ul>
+                    
+                    <a href="tutorials.htm" class="btn" style="margin-top: 15px; display: inline-block;">Watch Tutorials</a>
+                </div>
+                
+                <div class="issue-card">
+                    <h3>Lack of Motivation</h3>
+                    <p>Finding it hard to stay motivated and consistent?</p>
+                    
+                    <ul class="solution-list">
+                        <li>Set clear, achievable short-term goals</li>
+                        <li>Celebrate small victories and progress</li>
+                        <li>Create a consistent study routine</li>
+                        <li>Find a study partner for accountability</li>
+                        <li>Remember your "why" - your ultimate goal</li>
+                    </ul>
+                    
+                    <a href="motivation.htm" class="btn" style="margin-top: 15px; display: inline-block;">Get Motivated</a>
+                </div>
+                
+                <div class="issue-card">
+                    <h3>Time Management Problems</h3>
+                    <p>Struggling to find time or stay organized?</p>
+                    
+                    <ul class="solution-list">
+                        <li>Use the Pomodoro technique (25-min focus sessions)</li>
+                        <li>Create a weekly study schedule</li>
+                        <li>Eliminate distractions during study time</li>
+                        <li>Prioritize learning tasks by importance</li>
+                        <li>Use productivity apps and tools</li>
+                    </ul>
+                    
+                    <a href="study-time.htm" class="btn" style="margin-top: 15px; display: inline-block;">Plan Schedule</a>
+                </div>
+
+                <div class="issue-card">
+                    <h3>Information Overload</h3>
+                    <p>Feeling overwhelmed by too much information?</p>
+                    
+                    <ul class="solution-list">
+                        <li>Focus on one topic at a time</li>
+                        <li>Take regular breaks to process information</li>
+                        <li>Use mind maps for visual organization</li>
+                        <li>Practice active recall instead of passive reading</li>
+                        <li>Set realistic learning expectations</li>
+                    </ul>
+                    
+                    <a href="modules.htm" class="btn" style="margin-top: 15px; display: inline-block;">Structured Learning</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Quick Fix Section -->
+    <section class="quick-fix">
+        <div class="container">
+            <h2 class="section-title">Quick Learning Recovery Steps</h2>
+            <div class="fix-steps">
+                <div class="fix-step">
+                    <div class="step-number">1</div>
+                    <div class="step-content">
+                        <h4>Identify the Specific Issue</h4>
+                        <p>Pinpoint exactly what you're struggling with - is it a specific concept, time management, or motivation?</p>
+                    </div>
+                </div>
+                
+                <div class="fix-step">
+                    <div class="step-number">2</div>
+                    <div class="step-content">
+                        <h4>Break It Down</h4>
+                        <p>Divide complex problems into smaller, manageable parts that you can tackle one at a time.</p>
+                    </div>
+                </div>
+                
+                <div class="fix-step">
+                    <div class="step-number">3</div>
+                    <div class="step-content">
+                        <h4>Seek Alternative Resources</h4>
+                        <p>If one explanation doesn't work, try different learning materials or approaches.</p>
+                    </div>
+                </div>
+                
+                <div class="fix-step">
+                    <div class="step-number">4</div>
+                    <div class="step-content">
+                        <h4>Practice Consistently</h4>
+                        <p>Regular, shorter practice sessions are more effective than occasional long sessions.</p>
+                    </div>
+                </div>
+                
+                <div class="fix-step">
+                    <div class="step-number">5</div>
+                    <div class="step-content">
+                        <h4>Get Support</h4>
+                        <p>Don't hesitate to ask for help from instructors, peers, or support communities.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Prevention Tips Section -->
+    <section class="prevention-tips">
+        <div class="container">
+            <h2 class="section-title">Prevent Learning Issues</h2>
+            <div class="tips-grid">
+                <div class="tip-item">
+                    <div class="tip-icon">📅</div>
+                    <h4>Consistent Schedule</h4>
+                    <p>Establish a regular learning routine to build momentum and habit.</p>
+                </div>
+                
+                <div class="tip-item">
+                    <div class="tip-icon">🎯</div>
+                    <h4>Clear Goals</h4>
+                    <p>Set specific, measurable learning objectives to stay focused.</p>
+                </div>
+                
+                <div class="tip-item">
+                    <div class="tip-icon">🔄</div>
+                    <h4>Regular Review</h4>
+                    <p>Frequently review previous material to reinforce learning.</p>
+                </div>
+                
+                <div class="tip-item">
+                    <div class="tip-icon">💬</div>
+                    <h4>Active Learning</h4>
+                    <p>Engage with material through practice, not just passive reading.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Support Resources Section -->
+    <section class="support-resources">
+        <div class="container">
+            <h2 class="section-title">Additional Support Resources</h2>
+            <div class="resources-grid">
+                <div class="resource-item">
+                    <h4>Technical Support</h4>
+                    <p>Get help with platform issues and technical problems</p>
+                    <a href="tech-support.htm" class="btn" style="margin-top: 10px; display: inline-block;">Get Help</a>
+                </div>
+                
+                <div class="resource-item">
+                    <h4>Study Groups</h4>
+                    <p>Connect with fellow learners for collaborative support</p>
+                    <a href="resources.htm" class="btn" style="margin-top: 10px; display: inline-block;">Join Groups</a>
+                </div>
+                
+                <div class="resource-item">
+                    <h4>Instructor Help</h4>
+                    <p>Get personalized guidance from course instructors</p>
+                    <a href="contact.htm" class="btn" style="margin-top: 10px; display: inline-block;">Contact Instructors</a>
+                </div>
+                
+                <div class="resource-item">
+                    <h4>Learning Resources</h4>
+                    <p>Access additional materials and reference guides</p>
+                    <a href="resources.htm" class="btn" style="margin-top: 10px; display: inline-block;">Explore Resources</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 SkillStream E-Learning Platform. All rights reserved.</p>
+            <p>Every learning challenge is an opportunity for growth</p>
+        </div>
+    </footer>
+</body>
+</html>
