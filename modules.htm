@@ -1,0 +1,417 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interactive Learning Modules - SkillStream E-Learning Platform</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        
+        body {
+            background-color: #fefefe;
+            color: #5a5a5a;
+            line-height: 1.6;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        /* Header Styles */
+        header {
+            background: linear-gradient(135deg, #f8f5f0 0%, #e8e0d5 100%);
+            color: #6b625c;
+            padding: 60px 0;
+            text-align: center;
+            border-bottom: 1px solid #e0d9d0;
+        }
+        
+        .header-content h1 {
+            font-size: 2.5rem;
+            margin-bottom: 15px;
+            color: #8b7d6b;
+            font-weight: 300;
+        }
+        
+        .header-content p {
+            font-size: 1.2rem;
+            margin-bottom: 25px;
+            color: #7a6f63;
+        }
+        
+        .btn {
+            display: inline-block;
+            background: #c8b8a5;
+            color: #fff;
+            padding: 12px 30px;
+            border-radius: 25px;
+            text-decoration: none;
+            font-weight: bold;
+            transition: all 0.3s ease;
+            border: 2px solid #c8b8a5;
+        }
+        
+        .btn:hover {
+            background: transparent;
+            color: #c8b8a5;
+            transform: translateY(-2px);
+        }
+        
+        /* Navigation */
+        nav {
+            background: #fff;
+            padding: 20px 0;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        
+        .nav-links {
+            display: flex;
+            justify-content: center;
+            list-style: none;
+            flex-wrap: wrap;
+            gap: 15px;
+        }
+        
+        .nav-links a {
+            text-decoration: none;
+            color: #8b7d6b;
+            padding: 10px 20px;
+            border-radius: 25px;
+            transition: all 0.3s ease;
+        }
+        
+        .nav-links a:hover {
+            background: #f8f5f0;
+            color: #7a6a58;
+        }
+        
+        /* Modules Content */
+        .modules-content {
+            padding: 60px 0;
+            background: #fcfaf7;
+        }
+        
+        .section-title {
+            text-align: center;
+            margin-bottom: 40px;
+            font-size: 2rem;
+            color: #8b7d6b;
+        }
+        
+        .modules-intro {
+            text-align: center;
+            max-width: 800px;
+            margin: 0 auto 50px;
+            color: #7a6f63;
+            font-size: 1.1rem;
+            line-height: 1.8;
+        }
+        
+        /* Modules Grid */
+        .modules-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 30px;
+            margin-bottom: 50px;
+        }
+        
+        .module-card {
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease;
+            overflow: hidden;
+        }
+        
+        .module-card:hover {
+            transform: translateY(-5px);
+        }
+        
+        .module-header {
+            background: linear-gradient(135deg, #c8b8a5 0%, #a89987 100%);
+            color: white;
+            padding: 25px;
+            text-align: center;
+        }
+        
+        .module-header h3 {
+            font-size: 1.4rem;
+            margin-bottom: 10px;
+        }
+        
+        .module-level {
+            background: rgba(255,255,255,0.2);
+            padding: 5px 15px;
+            border-radius: 15px;
+            font-size: 0.9rem;
+            display: inline-block;
+        }
+        
+        .module-content {
+            padding: 25px;
+        }
+        
+        .module-features {
+            list-style: none;
+            margin: 20px 0;
+        }
+        
+        .module-features li {
+            padding: 8px 0;
+            border-bottom: 1px solid #f0f0f0;
+            position: relative;
+            padding-left: 25px;
+        }
+        
+        .module-features li:before {
+            content: "✓";
+            color: #8b7d6b;
+            font-weight: bold;
+            position: absolute;
+            left: 0;
+        }
+        
+        .module-meta {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-top: 20px;
+            font-size: 0.9rem;
+            color: #7a6f63;
+        }
+        
+        .progress-bar {
+            background: #f0f0f0;
+            border-radius: 10px;
+            height: 8px;
+            margin: 10px 0;
+            overflow: hidden;
+        }
+        
+        .progress-fill {
+            background: #c8b8a5;
+            height: 100%;
+            border-radius: 10px;
+        }
+        
+        /* Interactive Features */
+        .interactive-features {
+            background: white;
+            padding: 50px 0;
+        }
+        
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 25px;
+        }
+        
+        .feature-item {
+            text-align: center;
+            padding: 30px 20px;
+            background: #f8f5f0;
+            border-radius: 8px;
+            transition: all 0.3s ease;
+        }
+        
+        .feature-item:hover {
+            background: #e8e0d5;
+            transform: translateY(-3px);
+        }
+        
+        .feature-icon {
+            font-size: 2.5rem;
+            margin-bottom: 15px;
+        }
+        
+        .feature-item h4 {
+            color: #8b7d6b;
+            margin-bottom: 10px;
+        }
+        
+        /* Footer */
+        footer {
+            background: #8b7d6b;
+            color: #f8f5f0;
+            text-align: center;
+            padding: 30px 0;
+            margin-top: 50px;
+        }
+    </style>
+</head>
+<body>
+    <!-- Header Section -->
+    <header>
+        <div class="container">
+            <div class="header-content">
+                <h1>Interactive Learning Modules</h1>
+                <p>Engage with dynamic, hands-on learning experiences designed for maximum retention</p>
+                <a href="catalog.htm" class="btn">Browse All Courses</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Navigation -->
+    <nav>
+        <div class="container">
+            <ul class="nav-links">
+                <li><a href="index.htm">Home</a></li>
+                <li><a href="tips.htm">Tips & Tricks</a></li>
+                <li><a href="problems.htm">Problem-Solving</a></li>
+                <li><a href="catalog.htm">Course Catalog</a></li>
+                <li><a href="about.htm">About Us</a></li>
+                <li><a href="contact.htm">Contact Support</a></li>
+                <li><a href="admin.htm">Admin</a></li> <!-- BETULKAN SINI: Tutup tag dengan betul -->
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Modules Content Section -->
+    <section class="modules-content">
+        <div class="container">
+            <h2 class="section-title">Featured Learning Modules</h2>
+            
+            <div class="modules-intro">
+                <p>Our interactive modules combine multimedia content, practical exercises, and real-time feedback to create an engaging learning experience. Each module is designed to build your skills progressively with hands-on activities.</p>
+            </div>
+
+            <div class="modules-grid">
+                <div class="module-card">
+                    <div class="module-header">
+                        <h3>Web Development Fundamentals</h3>
+                        <span class="module-level">Beginner</span>
+                    </div>
+                    <div class="module-content">
+                        <p>Master HTML, CSS, and JavaScript through interactive coding exercises and live preview.</p>
+                        
+                        <ul class="module-features">
+                            <li>Interactive code editor</li>
+                            <li>Real-time preview</li>
+                            <li>Step-by-step guidance</li>
+                            <li>Progress tracking</li>
+                            <li>Certificate upon completion</li>
+                        </ul>
+                        
+                        <div class="progress-bar">
+                            <div class="progress-fill" style="width: 75%;"></div>
+                        </div>
+                        
+                        <div class="module-meta">
+                            <span>🕒 8 hours</span>
+                            <span>📊 75% Complete</span>
+                        </div>
+                        
+                        <a href="web-development-course.htm" class="btn" style="width: 100%; text-align: center; margin-top: 15px; display: block;">Continue Learning</a>
+                    </div>
+                </div>
+                
+                <div class="module-card">
+                    <div class="module-header">
+                        <h3>JavaScript Web Applications</h3>
+                        <span class="module-level">Intermediate</span>
+                    </div>
+                    <div class="module-content">
+                        <p>Build dynamic web applications with modern JavaScript frameworks and APIs.</p>
+                        
+                        <ul class="module-features">
+                            <li>Interactive code editor</li>
+                            <li>DOM manipulation exercises</li>
+                            <li>API integration projects</li>
+                            <li>Framework fundamentals</li>
+                            <li>Real-world applications</li>
+                        </ul>
+                        
+                        <div class="progress-bar">
+                            <div class="progress-fill" style="width: 40%;"></div>
+                        </div>
+                        
+                        <div class="module-meta">
+                            <span>🕒 12 hours</span>
+                            <span>📊 40% Complete</span>
+                        </div>
+                        
+                        <!-- BETULKAN SINI: 40% complete = Continue Learning -->
+                        <a href="javascript-course.htm" class="btn" style="width: 100%; text-align: center; margin-top: 15px; display: block;">Continue Learning</a>
+                    </div>
+                </div>
+                
+                <div class="module-card">
+                    <div class="module-header">
+                        <h3>UI/UX Design Principles</h3>
+                        <span class="module-level">Beginner</span>
+                    </div>
+                    <div class="module-content">
+                        <p>Create user-centered designs with interactive prototyping and usability testing.</p>
+                        
+                        <ul class="module-features">
+                            <li>Interactive design tools</li>
+                            <li>Prototyping exercises</li>
+                            <li>Usability testing</li>
+                            <li>Design feedback system</li>
+                            <li>Portfolio projects</li>
+                        </ul>
+                        
+                        <div class="progress-bar">
+                            <div class="progress-fill" style="width: 20%;"></div>
+                        </div>
+                        
+                        <div class="module-meta">
+                            <span>🕒 10 hours</span>
+                            <span>📊 20% Complete</span>
+                        </div>
+                        
+                        <a href="uiux-course.htm" class="btn" style="width: 100%; text-align: center; margin-top: 15px; display: block;">Continue Learning</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Interactive Features Section -->
+    <section class="interactive-features">
+        <div class="container">
+            <h2 class="section-title">Why Interactive Learning?</h2>
+            <div class="features-grid">
+                <div class="feature-item">
+                    <div class="feature-icon">🎯</div>
+                    <h4>Hands-On Practice</h4>
+                    <p>Learn by doing with real-world exercises and immediate feedback</p>
+                </div>
+                
+                <div class="feature-item">
+                    <div class="feature-icon">📊</div>
+                    <h4>Progress Tracking</h4>
+                    <p>Monitor your learning journey with detailed progress analytics</p>
+                </div>
+                
+                <div class="feature-item">
+                    <div class="feature-icon">🔄</div>
+                    <h4>Instant Feedback</h4>
+                    <p>Get immediate responses and guidance on your work</p>
+                </div>
+                
+                <div class="feature-item">
+                    <div class="feature-icon">🏆</div>
+                    <h4>Gamified Learning</h4>
+                    <p>Earn badges and certificates as you master new skills</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 SkillStream E-Learning Platform. All rights reserved.</p>
+            <p>Transforming learning through interactive experiences</p>
+        </div>
+    </footer>
+</body>
+</html>
