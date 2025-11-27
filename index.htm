@@ -1,0 +1,409 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Online Education Platform</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        
+        body {
+            background-color: #fefefe;
+            color: #5a5a5a;
+            line-height: 1.6;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        /* Header Styles - IVORY & WHITE THEME */
+        header {
+            background: linear-gradient(135deg, #f8f5f0 0%, #e8e0d5 100%);
+            color: #6b625c;
+            padding: 80px 0;
+            text-align: center;
+            border-bottom: 1px solid #e0d9d0;
+        }
+        
+        .header-content h1 {
+            font-size: 3rem;
+            margin-bottom: 20px;
+            color: #8b7d6b;
+            font-weight: 300;
+            letter-spacing: 1px;
+        }
+        
+        .header-content p {
+            font-size: 1.3rem;
+            margin-bottom: 30px;
+            color: #7a6f63;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        
+        .btn {
+            display: inline-block;
+            background: #c8b8a5;
+            color: #fff;
+            padding: 15px 35px;
+            border-radius: 30px;
+            text-decoration: none;
+            font-weight: 500;
+            transition: all 0.3s ease;
+            border: 2px solid #c8b8a5;
+            font-size: 1.1rem;
+        }
+        
+        .btn:hover {
+            background: transparent;
+            color: #c8b8a5;
+            transform: translateY(-3px);
+            box-shadow: 0 5px 15px rgba(200, 184, 165, 0.3);
+        }
+        
+        /* Navigation - IVORY & WHITE THEME */
+        nav {
+            background: #fff;
+            padding: 0;
+            border-bottom: 1px solid #f0ebe5;
+            box-shadow: 0 2px 20px rgba(139, 125, 107, 0.1);
+        }
+        
+        .main-nav {
+            display: flex;
+            justify-content: center;
+            list-style: none;
+            position: relative;
+        }
+        
+        .main-nav > li {
+            position: relative;
+        }
+        
+        .main-nav > li > a {
+            display: block;
+            color: #8b7d6b;
+            text-decoration: none;
+            padding: 20px 25px;
+            transition: all 0.3s ease;
+            font-weight: 500;
+            border-right: 1px solid #f0ebe5;
+        }
+        
+        .main-nav > li:last-child > a {
+            border-right: none;
+        }
+        
+        .main-nav > li > a:hover {
+            background: #f8f5f0;
+            color: #7a6a58;
+        }
+        
+        /* Dropdown Styles */
+        .dropdown {
+            position: absolute;
+            top: 100%;
+            left: 0;
+            background: white;
+            min-width: 280px;
+            box-shadow: 0 5px 20px rgba(139, 125, 107, 0.15);
+            border-radius: 0 0 8px 8px;
+            opacity: 0;
+            visibility: hidden;
+            transform: translateY(-10px);
+            transition: all 0.3s ease;
+            z-index: 1000;
+            border: 1px solid #f0ebe5;
+        }
+        
+        .main-nav > li:hover .dropdown {
+            opacity: 1;
+            visibility: visible;
+            transform: translateY(0);
+        }
+        
+        .dropdown a {
+            display: block;
+            color: #8b7d6b;
+            text-decoration: none;
+            padding: 15px 20px;
+            border-bottom: 1px solid #f8f5f0;
+            transition: all 0.3s ease;
+        }
+        
+        .dropdown a:hover {
+            background: #f8f5f0;
+            color: #7a6a58;
+            padding-left: 25px;
+        }
+        
+        .dropdown a:last-child {
+            border-bottom: none;
+        }
+
+        /* Quick Access Section */
+        .quick-access {
+            padding: 80px 0;
+            background: #fcfaf7;
+        }
+        
+        .section-title {
+            text-align: center;
+            margin-bottom: 50px;
+            font-size: 2.2rem;
+            color: #8b7d6b;
+            font-weight: 300;
+        }
+        
+        .cards-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 35px;
+            margin-bottom: 50px;
+        }
+        
+        .card {
+            background: white;
+            padding: 40px 30px;
+            border-radius: 15px;
+            box-shadow: 0 5px 25px rgba(139, 125, 107, 0.08);
+            text-align: center;
+            transition: all 0.3s ease;
+            border: 1px solid #f0ebe5;
+        }
+        
+        .card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 15px 35px rgba(139, 125, 107, 0.15);
+        }
+        
+        .card h3 {
+            color: #8b7d6b;
+            margin-bottom: 20px;
+            font-size: 1.6rem;
+            font-weight: 500;
+        }
+        
+        .card p {
+            color: #7a6f63;
+            margin-bottom: 25px;
+            font-size: 1.05rem;
+            line-height: 1.7;
+        }
+        
+        .card .btn {
+            background: #a89987;
+            border-color: #a89987;
+            padding: 12px 30px;
+            font-size: 1rem;
+        }
+        
+        .card .btn:hover {
+            background: transparent;
+            color: #a89987;
+        }
+
+        /* Footer */
+        footer {
+            background: #8b7d6b;
+            color: #f8f5f0;
+            text-align: center;
+            padding: 50px 0;
+            margin-top: 50px;
+        }
+        
+        footer p {
+            margin-bottom: 10px;
+            opacity: 0.9;
+        }
+		.auth-buttons {
+    position: absolute;
+    top: 30px;
+    right: 30px;
+    display: flex;
+    gap: 15px;
+}
+
+.auth-btn {
+    padding: 10px 25px;
+    border-radius: 30px;
+    text-decoration: none;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    font-size: 1rem;
+}
+
+.login-btn {
+    background: transparent;
+    color: #8b7d6b;
+    border: 2px solid #c8b8a5;
+}
+
+.login-btn:hover {
+    background: #c8b8a5;
+    color: white;
+}
+
+.signup-btn {
+    background: #c8b8a5;
+    color: white;
+    border: 2px solid #c8b8a5;
+}
+
+.signup-btn:hover {
+    background: transparent;
+    color: #c8b8a5;
+}
+
+.nav-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav-auth {
+    display: flex;
+    gap: 15px;
+}
+
+.nav-auth .auth-btn {
+    padding: 8px 20px;
+    font-size: 0.95rem;
+}
+    </style>
+</head>
+<body>
+    <!-- Header Section -->
+    <header>
+		
+        <div class="container">
+            <div class="header-content">
+                <h1>Online Education Platform</h1>
+                <p>Learn more online and get personalized advice with your team</p>
+                <a href="catalog.htm" class="btn">Explore Courses</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Advanced Navigation with CORRECT Dropdown Structure -->
+    <nav>
+        <div class="container nav-container">
+            <ul class="main-nav">
+                <li>
+                    <a href="index.htm">Home</a>
+                </li>
+                <li>
+                    <a href="tips.htm">Tips and Tricks</a>
+                    <div class="dropdown">
+                        <a href="modules.htm">Interactive Learning Modules</a>
+                        <a href="tutorials.htm">Animated Tutorials</a>
+                        <a href="study-time.htm">Study Timetable Planning</a>
+                        <a href="motivation.htm">Learning Motivations Tips</a>
+                    </div>
+                </li>
+                <li>
+                    <a href="problems.htm">Problem-Solving</a>
+                    <div class="dropdown">
+                        <a href="learning-issues.htm">Troubleshooting Learning Issues</a>
+                        <a href="tech-support.htm">Technical Support Guide</a>
+                        <a href="accessibility.htm">Content Accessibility Help</a>
+                        <a href="quiz-help.htm">Quiz and Assessment Help</a>
+                    </div>
+                </li>
+                <li>
+                    <a href="catalog.htm">Course Catalog</a>
+                    <div class="dropdown">
+                        <a href="resources.htm">Learning Resources</a>
+                        <a href="certification.htm">Certification Programs</a>
+                        <a href="Instructor-tools.htm">Instructor Tools</a>
+                    </div>
+                </li>
+                <li>
+                    <a href="about.htm">About Us</a>
+                </li>
+                <li>
+                    <a href="contact.htm">Contact Support</a>
+                </li>
+				<li>
+				    <a href="admin.php">Admin</a>
+				</li>
+            </ul>
+			
+			<div class="nav-auth">
+			<a href="login.htm" class="auth-btn login-btn">Login</a>
+			<a href="signup.htm" class="auth-btn signup-btn">Sign Up</a>
+		</div>
+			
+        </div>
+    </nav>
+
+    <!-- Quick Access Section -->
+    <section class="quick-access">
+        <div class="container">
+            <h2 class="section-title">Quick Access</h2>
+            <div class="cards-container">
+                <div class="card">
+                    <h3>Tips and Tricks</h3>
+                    <p>Get expert advice for better learning</p>
+                    <a href="tips.htm" class="btn">Explore Tips</a>
+                </div>
+                
+                <div class="card">
+                    <h3>Problem-Solving</h3>
+                    <p>Find solutions to learning challenges</p>
+                    <a href="problems.htm" class="btn">Get Help</a>
+                </div>
+                
+                <div class="card">
+                    <h3>Course Catalog</h3>
+                    <p>Browse all available courses</p>
+                    <a href="catalog.htm" class="btn">View Courses</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Main Features Section -->
+    <section class="quick-access">
+        <div class="container">
+            <h2 class="section-title">Learning Resources</h2>
+            <div class="cards-container">
+                <div class="card">
+                    <h3>Interactive Learning Modules</h3>
+                    <p>Engage with dynamic content and interactive exercises</p>
+                    <a href="modules.htm" class="btn">Explore Modules</a>
+                </div>
+                
+                <div class="card">
+                    <h3>Animated Tutorials</h3>
+                    <p>Learn through visual demonstrations and animated guides</p>
+                    <a href="tutorials.htm" class="btn">View Tutorials</a>
+                </div>
+                
+                <div class="card">
+                    <h3>Certification Programs</h3>
+                    <p>Get certified with our comprehensive programs</p>
+                    <a href="certification.htm" class="btn">View Programs</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 Online Education Platform. All rights reserved.</p>
+            <p>Comprehensive learning solutions for everyone</p>
+        </div>
+    </footer>
+</body>
+</html>
