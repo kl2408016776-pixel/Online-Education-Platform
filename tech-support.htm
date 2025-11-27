@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Technical Support Guide - SkillStream E-Learning Platform</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        
+        body {
+            background-color: #fefefe;
+            color: #5a5a5a;
+            line-height: 1.6;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        /* Header Styles */
+        header {
+            background: linear-gradient(135deg, #f8f5f0 0%, #e8e0d5 100%);
+            color: #6b625c;
+            padding: 60px 0;
+            text-align: center;
+            border-bottom: 1px solid #e0d9d0;
+        }
+        
+        .header-content h1 {
+            font-size: 2.5rem;
+            margin-bottom: 15px;
+            color: #8b7d6b;
+            font-weight: 300;
+        }
+        
+        .header-content p {
+            font-size: 1.2rem;
+            margin-bottom: 25px;
+            color: #7a6f63;
+        }
+        
+        .btn {
+            display: inline-block;
+            background: #c8b8a5;
+            color: #fff;
+            padding: 12px 30px;
+            border-radius: 25px;
+            text-decoration: none;
+            font-weight: bold;
+            transition: all 0.3s ease;
+            border: 2px solid #c8b8a5;
+        }
+        
+        .btn:hover {
+            background: transparent;
+            color: #c8b8a5;
+            transform: translateY(-2px);
+        }
+        
+        /* Navigation */
+        nav {
+            background: #fff;
+            padding: 20px 0;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        
+        .nav-links {
+            display: flex;
+            justify-content: center;
+            list-style: none;
+            flex-wrap: wrap;
+            gap: 15px;
+        }
+        
+        .nav-links a {
+            text-decoration: none;
+            color: #8b7d6b;
+            padding: 10px 20px;
+            border-radius: 25px;
+            transition: all 0.3s ease;
+        }
+        
+        .nav-links a:hover {
+            background: #f8f5f0;
+            color: #7a6a58;
+        }
+        
+        /* Tech Support Content */
+        .tech-support-content {
+            padding: 60px 0;
+            background: #fcfaf7;
+        }
+        
+        .section-title {
+            text-align: center;
+            margin-bottom: 40px;
+            font-size: 2rem;
+            color: #8b7d6b;
+        }
+        
+        .support-intro {
+            text-align: center;
+            max-width: 800px;
+            margin: 0 auto 50px;
+            color: #7a6f63;
+            font-size: 1.1rem;
+            line-height: 1.8;
+        }
+        
+        /* Troubleshooting Grid */
+        .troubleshooting-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 30px;
+            margin-bottom: 50px;
+        }
+        
+        .issue-card {
+            background: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease;
+            border-left: 4px solid #c8b8a5;
+        }
+        
+        .issue-card:hover {
+            transform: translateY(-5px);
+        }
+        
+        .issue-card h3 {
+            color: #8b7d6b;
+            margin-bottom: 15px;
+            font-size: 1.3rem;
+        }
+        
+        .solution-list {
+            list-style: none;
+            margin: 15px 0;
+        }
+        
+        .solution-list li {
+            padding: 8px 0;
+            border-bottom: 1px solid #f0f0f0;
+            position: relative;
+            padding-left: 25px;
+        }
+        
+        .solution-list li:before {
+            content: "🔧";
+            position: absolute;
+            left: 0;
+        }
+        
+        /* Quick Fixes */
+        .quick-fixes {
+            background: white;
+            padding: 50px 0;
+        }
+        
+        .fixes-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 25px;
+        }
+        
+        .fix-item {
+            text-align: center;
+            padding: 30px 20px;
+            background: #f8f5f0;
+            border-radius: 8px;
+            transition: all 0.3s ease;
+        }
+        
+        .fix-item:hover {
+            background: #e8e0d5;
+            transform: translateY(-3px);
+        }
+        
+        .fix-icon {
+            font-size: 2.5rem;
+            margin-bottom: 15px;
+        }
+        
+        .fix-item h4 {
+            color: #8b7d6b;
+            margin-bottom: 10px;
+        }
+        
+        /* Contact Support */
+        .contact-support {
+            padding: 60px 0;
+            background: #fcfaf7;
+        }
+        
+        .support-options {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+        
+        .support-option {
+            background: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            text-align: center;
+        }
+        
+        .support-option h4 {
+            color: #8b7d6b;
+            margin-bottom: 15px;
+        }
+        
+        /* Footer */
+        footer {
+            background: #8b7d6b;
+            color: #f8f5f0;
+            text-align: center;
+            padding: 30px 0;
+            margin-top: 50px;
+        }
+    </style>
+</head>
+<body>
+    <!-- Header Section -->
+    <header>
+        <div class="container">
+            <div class="header-content">
+                <h1>Technical Support Guide</h1>
+                <p>Get help with technical issues and platform troubleshooting</p>
+                <a href="contact.htm" class="btn">Contact Support Team</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Navigation -->
+    <nav>
+        <div class="container">
+            <ul class="nav-links">
+                <li><a href="index.htm">Home</a></li>
+                <li><a href="tips.htm">Tips & Tricks</a></li>
+                <li><a href="problems.htm">Problem-Solving</a></li>
+                <li><a href="catalog.htm">Course Catalog</a></li>
+                <li><a href="about.htm">About Us</a></li>
+                <li><a href="contact.htm">Contact Support</a></li>
+                <li><a href="admin.htm">Admin</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Tech Support Content Section -->
+    <section class="tech-support-content">
+        <div class="container">
+            <h2 class="section-title">Common Technical Issues & Solutions</h2>
+            
+            <div class="support-intro">
+                <p>Experiencing technical difficulties? Our comprehensive guide will help you resolve common platform issues quickly and get back to learning.</p>
+            </div>
+
+            <div class="troubleshooting-grid">
+                <div class="issue-card">
+                    <h3>Login & Access Issues</h3>
+                    <p>Problems signing in or accessing your courses?</p>
+                    
+                    <ul class="solution-list">
+                        <li>Clear browser cache and cookies</li>
+                        <li>Reset your password using "Forgot Password"</li>
+                        <li>Try a different web browser</li>
+                        <li>Check your internet connection</li>
+                        <li>Disable browser extensions temporarily</li>
+                    </ul>
+                </div>
+                
+                <div class="issue-card">
+                    <h3>Video Playback Problems</h3>
+                    <p>Videos not loading or playing correctly?</p>
+                    
+                    <ul class="solution-list">
+                        <li>Check your internet speed and stability</li>
+                        <li>Update your web browser to latest version</li>
+                        <li>Try lowering video quality settings</li>
+                        <li>Disable hardware acceleration in browser</li>
+                        <li>Clear browser cache and restart</li>
+                    </ul>
+                </div>
+                
+                <div class="issue-card">
+                    <h3>Course Progress Not Saving</h3>
+                    <p>Your progress isn't being recorded?</p>
+                    
+                    <ul class="solution-list">
+                        <li>Ensure you're properly logged in</li>
+                        <li>Check your internet connection</li>
+                        <li>Refresh the page and try again</li>
+                        <li>Complete entire sections before navigating away</li>
+                        <li>Contact support if issue persists</li>
+                    </ul>
+                </div>
+
+                <div class="issue-card">
+                    <h3>Mobile App Issues</h3>
+                    <p>Problems with the mobile application?</p>
+                    
+                    <ul class="solution-list">
+                        <li>Update to the latest app version</li>
+                        <li>Restart the mobile application</li>
+                        <li>Check device storage space</li>
+                        <li>Reinstall the application if needed</li>
+                        <li>Ensure stable internet connection</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Quick Fixes Section -->
+    <section class="quick-fixes">
+        <div class="container">
+            <h2 class="section-title">Quick Technical Fixes</h2>
+            <div class="fixes-grid">
+                <div class="fix-item">
+                    <div class="fix-icon">🔄</div>
+                    <h4>Browser Refresh</h4>
+                    <p>Simple page refresh often resolves temporary issues</p>
+                </div>
+                
+                <div class="fix-item">
+                    <div class="fix-icon">🧹</div>
+                    <h4>Clear Cache</h4>
+                    <p>Remove temporary files that may cause conflicts</p>
+                </div>
+                
+                <div class="fix-item">
+                    <div class="fix-icon">🌐</div>
+                    <h4>Check Connection</h4>
+                    <p>Ensure stable internet connectivity</p>
+                </div>
+                
+                <div class="fix-item">
+                    <div class="fix-icon">🆙</div>
+                    <h4>Update Browser</h4>
+                    <p>Use the latest browser version for compatibility</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 SkillStream E-Learning Platform. All rights reserved.</p>
+            <p>We're here to ensure smooth learning experience for everyone</p>
+        </div>
+    </footer>
+</body>
+</html>
