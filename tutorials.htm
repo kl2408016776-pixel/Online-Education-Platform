@@ -1,0 +1,429 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animated Tutorials - SkillStream E-Learning Platform</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        
+        body {
+            background-color: #fefefe;
+            color: #5a5a5a;
+            line-height: 1.6;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        /* Header Styles */
+        header {
+            background: linear-gradient(135deg, #f8f5f0 0%, #e8e0d5 100%);
+            color: #6b625c;
+            padding: 60px 0;
+            text-align: center;
+            border-bottom: 1px solid #e0d9d0;
+        }
+        
+        .header-content h1 {
+            font-size: 2.5rem;
+            margin-bottom: 15px;
+            color: #8b7d6b;
+            font-weight: 300;
+        }
+        
+        .header-content p {
+            font-size: 1.2rem;
+            margin-bottom: 25px;
+            color: #7a6f63;
+        }
+        
+        .btn {
+            display: inline-block;
+            background: #c8b8a5;
+            color: #fff;
+            padding: 12px 30px;
+            border-radius: 25px;
+            text-decoration: none;
+            font-weight: bold;
+            transition: all 0.3s ease;
+            border: 2px solid #c8b8a5;
+        }
+        
+        .btn:hover {
+            background: transparent;
+            color: #c8b8a5;
+            transform: translateY(-2px);
+        }
+        
+        /* Navigation */
+        nav {
+            background: #fff;
+            padding: 20px 0;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        
+        .nav-links {
+            display: flex;
+            justify-content: center;
+            list-style: none;
+            flex-wrap: wrap;
+            gap: 15px;
+        }
+        
+        .nav-links a {
+            text-decoration: none;
+            color: #8b7d6b;
+            padding: 10px 20px;
+            border-radius: 25px;
+            transition: all 0.3s ease;
+        }
+        
+        .nav-links a:hover {
+            background: #f8f5f0;
+            color: #7a6a58;
+        }
+        
+        /* Tutorials Content */
+        .tutorials-content {
+            padding: 60px 0;
+            background: #fcfaf7;
+        }
+        
+        .section-title {
+            text-align: center;
+            margin-bottom: 40px;
+            font-size: 2rem;
+            color: #8b7d6b;
+        }
+        
+        .tutorials-intro {
+            text-align: center;
+            max-width: 800px;
+            margin: 0 auto 50px;
+            color: #7a6f63;
+            font-size: 1.1rem;
+            line-height: 1.8;
+        }
+        
+        /* Tutorials Grid */
+        .tutorials-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 30px;
+            margin-bottom: 50px;
+        }
+        
+        .tutorial-card {
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease;
+            overflow: hidden;
+        }
+        
+        .tutorial-card:hover {
+            transform: translateY(-5px);
+        }
+        
+        .tutorial-preview {
+            height: 200px;
+            background: linear-gradient(135deg, #c8b8a5 0%, #a89987 100%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .play-button {
+            width: 60px;
+            height: 60px;
+            background: rgba(255,255,255,0.9);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            color: #8b7d6b;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+        
+        .play-button:hover {
+            transform: scale(1.1);
+            background: white;
+        }
+        
+        .tutorial-content {
+            padding: 25px;
+        }
+        
+        .tutorial-category {
+            background: #f8f5f0;
+            color: #8b7d6b;
+            padding: 5px 15px;
+            border-radius: 15px;
+            font-size: 0.9rem;
+            display: inline-block;
+            margin-bottom: 15px;
+        }
+        
+        .tutorial-card h3 {
+            color: #8b7d6b;
+            margin-bottom: 10px;
+            font-size: 1.3rem;
+        }
+        
+        .tutorial-card p {
+            color: #666;
+            margin-bottom: 20px;
+            line-height: 1.6;
+        }
+        
+        .tutorial-meta {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-top: 20px;
+            font-size: 0.9rem;
+            color: #7a6f63;
+        }
+        
+        .difficulty {
+            display: flex;
+            align-items: center;
+            gap: 5px;
+        }
+        
+        .difficulty-dots {
+            display: flex;
+            gap: 3px;
+        }
+        
+        .dot {
+            width: 8px;
+            height: 8px;
+            border-radius: 50%;
+            background: #e0d9d0;
+        }
+        
+        .dot.filled {
+            background: #c8b8a5;
+        }
+        
+        /* Learning Path */
+        .learning-path {
+            padding: 60px 0;
+            background: #fcfaf7;
+        }
+        
+        .path-steps {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        
+        .path-step {
+            display: flex;
+            align-items: flex-start;
+            margin-bottom: 30px;
+            padding: 20px;
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+        }
+        
+        .step-number {
+            background: #c8b8a5;
+            color: white;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            margin-right: 20px;
+            flex-shrink: 0;
+        }
+        
+        .step-content h4 {
+            color: #8b7d6b;
+            margin-bottom: 10px;
+        }
+        
+        /* Footer */
+        footer {
+            background: #8b7d6b;
+            color: #f8f5f0;
+            text-align: center;
+            padding: 30px 0;
+            margin-top: 50px;
+        }
+    </style>
+</head>
+<body>
+    <!-- Header Section -->
+    <header>
+        <div class="container">
+            <div class="header-content">
+                <h1>Animated Tutorials</h1>
+                <p>Learn through engaging video tutorials and step-by-step visual guides</p>
+                <a href="#featured-tutorials" class="btn">Start Learning</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Navigation -->
+    <nav>
+        <div class="container">
+            <ul class="nav-links">
+                <li><a href="index.htm">Home</a></li>
+                <li><a href="tips.htm">Tips & Tricks</a></li>
+                <li><a href="problems.htm">Problem-Solving</a></li>
+                <li><a href="catalog.htm">Course Catalog</a></li>
+                <li><a href="about.htm">About Us</a></li>
+                <li><a href="contact.htm">Contact Support</a></li>
+                <li><a href="admin.php">Admin</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Tutorials Content Section -->
+    <section class="tutorials-content">
+        <div class="container">
+            <h2 class="section-title" id="featured-tutorials">Featured Tutorials</h2>
+            
+            <div class="tutorials-intro">
+                <p>Our animated tutorials break down complex concepts into easy-to-follow visual lessons. Each tutorial includes practical examples, code demonstrations, and real-world applications to enhance your learning experience.</p>
+            </div>
+
+            <div class="tutorials-grid">
+                <div class="tutorial-card">
+                    <div class="tutorial-preview">
+                        <div class="play-button">▶</div>
+                    </div>
+                    <div class="tutorial-content">
+                        <span class="tutorial-category">HTML & CSS</span>
+                        <h3>Responsive Web Design</h3>
+                        <p>Learn how to create websites that look great on all devices using CSS Grid, Flexbox, and media queries.</p>
+                        
+                        <div class="tutorial-meta">
+                            <span>🕒 4 hours</span>
+                            <div class="difficulty">
+                                <span>Difficulty:</span>
+                                <div class="difficulty-dots">
+                                    <div class="dot filled"></div>
+                                    <div class="dot filled"></div>
+                                    <div class="dot"></div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <a href="https://www.youtube.com/watch?v=srvUrASNj0s" target="_blank" class="btn" style="width: 100%; text-align: center; margin-top: 15px; display: block;">Watch Tutorial</a>
+                    </div>
+                </div>
+                
+                <div class="tutorial-card">
+                    <div class="tutorial-preview">
+                        <div class="play-button">▶</div>
+                    </div>
+                    <div class="tutorial-content">
+                        <span class="tutorial-category">JavaScript</span>
+                        <h3>DOM Manipulation Basics</h3>
+                        <p>Master the Document Object Model and learn how to dynamically update web page content with JavaScript.</p>
+                        
+                        <div class="tutorial-meta">
+                            <span>🕒 2 hours</span>
+                            <div class="difficulty">
+                                <span>Difficulty:</span>
+                                <div class="difficulty-dots">
+                                    <div class="dot filled"></div>
+                                    <div class="dot"></div>
+                                    <div class="dot"></div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <a href="https://www.youtube.com/watch?v=5fb2aPlgoys" target="_blank" class="btn" style="width: 100%; text-align: center; margin-top: 15px; display: block;">Watch Tutorial</a>
+                    </div>
+                </div>
+                
+                <div class="tutorial-card">
+                    <div class="tutorial-preview">
+                        <div class="play-button">▶</div>
+                    </div>
+                    <div class="tutorial-content">
+                        <span class="tutorial-category">Web Development</span>
+                        <h3>API Integration Guide</h3>
+                        <p>Learn how to connect your web applications to external services and data sources using REST APIs.</p>
+                        
+                        <div class="tutorial-meta">
+                            <span>🕒 2 hours</span>
+                            <div class="difficulty">
+                                <span>Difficulty:</span>
+                                <div class="difficulty-dots">
+                                    <div class="dot filled"></div>
+                                    <div class="dot filled"></div>
+                                    <div class="dot filled"></div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <a href="https://www.youtube.com/watch?v=GZvSYJDk-us" target="_blank" class="btn" style="width: 100%; text-align: center; margin-top: 15px; display: block;">Watch Tutorial</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Learning Path Section -->
+    <section class="learning-path">
+        <div class="container">
+            <h2 class="section-title">Recommended Learning Path</h2>
+            <div class="path-steps">
+                <div class="path-step">
+                    <div class="step-number">1</div>
+                    <div class="step-content">
+                        <h4>Start with HTML & CSS</h4>
+                        <p>Learn the building blocks of web development with our beginner-friendly tutorials on HTML structure and CSS styling.</p>
+                    </div>
+                </div>
+                
+                <div class="path-step">
+                    <div class="step-number">2</div>
+                    <div class="step-content">
+                        <h4>Master JavaScript Fundamentals</h4>
+                        <p>Progress to interactive web development by learning JavaScript programming concepts and DOM manipulation.</p>
+                    </div>
+                </div>
+                
+                <div class="path-step">
+                    <div class="step-number">3</div>
+                    <div class="step-content">
+                        <h4>Explore Advanced Topics</h4>
+                        <p>Dive into backend development, APIs, databases, and modern frameworks to become a full-stack developer.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 SkillStream E-Learning Platform. All rights reserved.</p>
+            <p>Learning made visual and engaging through animated tutorials</p>
+        </div>
+    </footer>
+</body>
+</html>
