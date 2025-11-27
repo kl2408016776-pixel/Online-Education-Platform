@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tips & Tricks - Online Education Platform</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        
+        body {
+            background-color: #fefefe;
+            color: #5a5a5a;
+            line-height: 1.6;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        /* Header Styles */
+        header {
+            background: linear-gradient(135deg, #f8f5f0 0%, #e8e0d5 100%);
+            color: #6b625c;
+            padding: 60px 0;
+            text-align: center;
+            border-bottom: 1px solid #e0d9d0;
+        }
+        
+        .header-content h1 {
+            font-size: 2.5rem;
+            margin-bottom: 15px;
+            color: #8b7d6b;
+            font-weight: 300;
+        }
+        
+        .header-content p {
+            font-size: 1.2rem;
+            margin-bottom: 25px;
+            color: #7a6f63;
+        }
+        
+        .btn {
+            display: inline-block;
+            background: #c8b8a5;
+            color: #fff;
+            padding: 12px 30px;
+            border-radius: 25px;
+            text-decoration: none;
+            font-weight: bold;
+            transition: all 0.3s ease;
+            border: 2px solid #c8b8a5;
+        }
+        
+        .btn:hover {
+            background: transparent;
+            color: #c8b8a5;
+            transform: translateY(-2px);
+        }
+        
+        /* Navigation */
+        nav {
+            background: #fff;
+            padding: 20px 0;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        
+        .nav-links {
+            display: flex;
+            justify-content: center;
+            list-style: none;
+            flex-wrap: wrap;
+            gap: 15px;
+        }
+        
+        .nav-links a {
+            text-decoration: none;
+            color: #8b7d6b;
+            padding: 10px 20px;
+            border-radius: 25px;
+            transition: all 0.3s ease;
+        }
+        
+        .nav-links a:hover {
+            background: #f8f5f0;
+            color: #7a6a58;
+        }
+        
+        /* Tips Content */
+        .tips-content {
+            padding: 60px 0;
+            background: #fcfaf7;
+        }
+        
+        .section-title {
+            text-align: center;
+            margin-bottom: 40px;
+            font-size: 2rem;
+            color: #8b7d6b;
+        }
+        
+        .tips-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 30px;
+            margin-bottom: 50px;
+        }
+        
+        .tip-card {
+            background: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease;
+        }
+        
+        .tip-card:hover {
+            transform: translateY(-5px);
+        }
+        
+        .tip-card h3 {
+            color: #8b7d6b;
+            margin-bottom: 15px;
+            font-size: 1.3rem;
+        }
+        
+        .tip-card p {
+            color: #666;
+            margin-bottom: 15px;
+        }
+        
+        .resources-section {
+            background: white;
+            padding: 50px 0;
+        }
+        
+        .resource-links {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+        }
+        
+        .resource-item {
+            text-align: center;
+            padding: 25px;
+            background: #f8f5f0;
+            border-radius: 8px;
+        }
+        
+        .resource-item h4 {
+            color: #8b7d6b;
+
+            margin-bottom: 10px;
+        }
+        
+        /* Footer */
+        footer {
+            background: #8b7d6b;
+            color: #f8f5f0;
+            text-align: center;
+            padding: 30px 0;
+            margin-top: 50px;
+        }
+    </style>
+</head>
+<body>
+    <!-- Header Section -->
+    <header>
+        <div class="container">
+            <div class="header-content">
+                <h1>Tips & Tricks</h1>
+                <p>Expert advice and strategies for better learning outcomes</p>
+                <a href="modules.htm" class="btn">Start Learning</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Navigation -->
+    <nav>
+        <div class="container">
+            <ul class="nav-links">
+                <li><a href="index.htm">Home</a></li>
+                <li><a href="tips.htm">Tips & Tricks</a></li>
+                <li><a href="problems.htm">Problem-Solving</a></li>
+                <li><a href="catalog.htm">Course Catalog</a></li>
+                <li><a href="about.htm">About Us</a></li>
+                <li><a href="contact.htm">Contact Support</a></li>
+                <li><a href="admin.php">Admin</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Tips Content Section -->
+    <section class="tips-content">
+        <div class="container">
+            <h2 class="section-title">Learning Strategies & Tips</h2>
+            <div class="tips-grid">
+                <div class="tip-card">
+                    <h3>Effective Study Techniques</h3>
+                    <p>Discover proven methods to maximize your learning efficiency and retention.</p>
+                    <ul>
+                        <li>Spaced repetition for long-term memory</li>
+                        <li>Active recall practice</li>
+                        <li>Pomodoro technique for focus</li>
+                    </ul>
+                </div>
+                
+                <div class="tip-card">
+                    <h3>Time Management</h3>
+                    <p>Learn how to balance your studies with other commitments effectively.</p>
+                    <ul>
+                        <li>Create realistic study schedules</li>
+                        <li>Set achievable goals</li>
+                        <li>Prioritize tasks efficiently</li>
+                    </ul>
+                </div>
+                
+                <div class="tip-card">
+                    <h3>Motivation & Mindset</h3>
+                    <p>Stay motivated and develop a growth mindset for continuous learning.</p>
+                    <ul>
+                        <li>Set clear learning objectives</li>
+                        <li>Celebrate small victories</li>
+                        <li>Embrace challenges as opportunities</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Resources Section -->
+    <section class="resources-section">
+        <div class="container">
+            <h2 class="section-title">Explore More Resources</h2>
+            <div class="resource-links">
+                <div class="resource-item">
+                    <h4>Interactive Modules</h4>
+                    <a href="modules.htm" class="btn">Explore</a>
+                </div>
+                <div class="resource-item">
+                    <h4>Study Planning</h4>
+                    <a href="study-time.htm" class="btn">Plan Now</a>
+                </div>
+                <div class="resource-item">
+                    <h4>Motivation Tips</h4>
+                    <a href="motivation.htm" class="btn">Get Inspired</a>
+                </div>
+                <div class="resource-item">
+                    <h4>Animated Tutorials</h4>
+                    <a href="tutorials.htm" class="btn">Watch Now</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 Online Education Platform. All rights reserved.</p>
+            <p>Enhancing learning through expert tips and strategies</p>
+        </div>
+    </footer>
+</body>
+</html>
