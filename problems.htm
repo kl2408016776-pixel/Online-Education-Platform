@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Problem-Solving Support - SkillStream E-Learning Platform</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        
+        body {
+            background-color: #fefefe;
+            color: #5a5a5a;
+            line-height: 1.6;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        /* Header Styles */
+        header {
+            background: linear-gradient(135deg, #f8f5f0 0%, #e8e0d5 100%);
+            color: #6b625c;
+            padding: 60px 0;
+            text-align: center;
+            border-bottom: 1px solid #e0d9d0;
+        }
+        
+        .header-content h1 {
+            font-size: 2.5rem;
+            margin-bottom: 15px;
+            color: #8b7d6b;
+            font-weight: 300;
+        }
+        
+        .header-content p {
+            font-size: 1.2rem;
+            margin-bottom: 25px;
+            color: #7a6f63;
+        }
+        
+        .btn {
+            display: inline-block;
+            background: #c8b8a5;
+            color: #fff;
+            padding: 12px 30px;
+            border-radius: 25px;
+            text-decoration: none;
+            font-weight: bold;
+            transition: all 0.3s ease;
+            border: 2px solid #c8b8a5;
+        }
+        
+        .btn:hover {
+            background: transparent;
+            color: #c8b8a5;
+            transform: translateY(-2px);
+        }
+        
+        /* Navigation */
+        nav {
+            background: #fff;
+            padding: 20px 0;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        
+        .nav-links {
+            display: flex;
+            justify-content: center;
+            list-style: none;
+            flex-wrap: wrap;
+            gap: 15px;
+        }
+        
+        .nav-links a {
+            text-decoration: none;
+            color: #8b7d6b;
+            padding: 10px 20px;
+            border-radius: 25px;
+            transition: all 0.3s ease;
+        }
+        
+        .nav-links a:hover {
+            background: #f8f5f0;
+            color: #7a6a58;
+        }
+        
+        /* Problems Content */
+        .problems-content {
+            padding: 60px 0;
+            background: #fcfaf7;
+        }
+        
+        .section-title {
+            text-align: center;
+            margin-bottom: 40px;
+            font-size: 2rem;
+            color: #8b7d6b;
+        }
+        
+        .problems-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 30px;
+            margin-bottom: 50px;
+        }
+        
+        .problem-card {
+            background: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease;
+            border-left: 4px solid #c8b8a5;
+        }
+        
+        .problem-card:hover {
+            transform: translateY(-5px);
+        }
+        
+        .problem-card h3 {
+            color: #8b7d6b;
+            margin-bottom: 15px;
+            font-size: 1.3rem;
+        }
+        
+        .problem-card p {
+            color: #666;
+            margin-bottom: 15px;
+        }
+        
+        .solution-list {
+            list-style: none;
+            padding-left: 0;
+        }
+        
+        .solution-list li {
+            padding: 8px 0;
+            border-bottom: 1px solid #f0f0f0;
+        }
+        
+        .solution-list li:before {
+            content: "✓ ";
+            color: #8b7d6b;
+            font-weight: bold;
+        }
+        
+        /* Quick Help Section */
+        .quick-help {
+            background: white;
+            padding: 50px 0;
+        }
+        
+        .help-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+        }
+        
+        .help-item {
+            text-align: center;
+            padding: 25px;
+            background: #f8f5f0;
+            border-radius: 8px;
+            transition: all 0.3s ease;
+        }
+        
+        .help-item:hover {
+            background: #e8e0d5;
+        }
+        
+        .help-item h4 {
+            color: #8b7d6b;
+            margin-bottom: 15px;
+        }
+        
+        /* Footer */
+        footer {
+            background: #8b7d6b;
+            color: #f8f5f0;
+            text-align: center;
+            padding: 30px 0;
+            margin-top: 50px;
+        }
+    </style>
+</head>
+<body>
+    <!-- Header Section -->
+    <header>
+        <div class="container">
+            <div class="header-content">
+                <h1>Problem-Solving Support</h1>
+                <p>Get immediate help and solutions for your learning challenges</p>
+                <a href="contact.htm" class="btn">Get Help Now</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Navigation -->
+    <nav>
+        <div class="container">
+            <ul class="nav-links">
+                <li><a href="index.htm">Home</a></li>
+                <li><a href="tips.htm">Tips & Tricks</a></li>
+                <li><a href="problems-solving.htm">Problem-Solving</a></li>
+                <li><a href="catalog.htm">Course Catalog</a></li>
+                <li><a href="about.htm">About Us</a></li>
+                <li><a href="contact.htm">Contact Support</a></li>
+                <li><a href="admin.php">Admin</a></li>
+
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Problems Content Section -->
+    <section class="problems-content">
+        <div class="container">
+            <h2 class="section-title">Common Learning Challenges & Solutions</h2>
+            <div class="problems-grid">
+                <div class="problem-card">
+                    <h3>Technical Issues</h3>
+                    <p>Problems with platform access, video playback, or system compatibility</p>
+                    <ul class="solution-list">
+                        <li>Clear browser cache and cookies</li>
+                        <li>Update your web browser</li>
+                        <li>Check internet connection stability</li>
+                        <li>Try different browser or device</li>
+                    </ul>
+                    <a href="tech-support.htm" class="btn" style="margin-top: 15px; display: inline-block;">Technical Guide</a>
+                </div>
+                
+                <div class="problem-card">
+                    <h3>Learning Difficulties</h3>
+                    <p>Challenges understanding content or keeping up with course pace</p>
+                    <ul class="solution-list">
+                        <li>Review previous lessons</li>
+                        <li>Use pause and rewind features</li>
+                        <li>Join study groups</li>
+                        <li>Contact instructors for clarification</li>
+                    </ul>
+                    <a href="learning-issues.htm" class="btn" style="margin-top: 15px; display: inline-block;">Get Learning Help</a>
+                </div>
+                
+                <div class="problem-card">
+                    <h3>Accessibility Concerns</h3>
+                    <p>Need assistance with visual, auditory, or mobility requirements</p>
+                    <ul class="solution-list">
+                        <li>Enable closed captions</li>
+                        <li>Use screen reader compatibility</li>
+                        <li>Adjust text size and contrast</li>
+                        <li>Keyboard navigation support</li>
+                    </ul>
+                    <a href="accessibility.htm" class="btn" style="margin-top: 15px; display: inline-block;">Accessibility Help</a>
+                </div>
+
+                <div class="problem-card">
+                    <h3>Assessment Problems</h3>
+                    <p>Issues with quizzes, tests, or understanding evaluation criteria</p>
+                    <ul class="solution-list">
+                        <li>Review quiz instructions carefully</li>
+                        <li>Check time limits and attempts</li>
+                        <li>Practice with sample questions</li>
+                        <li>Contact support for technical issues</li>
+                    </ul>
+                    <a href="quiz-help.htm" class="btn" style="margin-top: 15px; display: inline-block;">Quiz Assistance</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Quick Help Section -->
+    <section class="quick-help">
+        <div class="container">
+            <h2 class="section-title">Quick Help Resources</h2>
+            <div class="help-grid">
+                <div class="help-item">
+                    <h4>Technical Support</h4>
+                    <p>Step-by-step guides for technical issues</p>
+                    <a href="tech-support.htm" class="btn">Get Support</a>
+                </div>
+                <div class="help-item">
+                    <h4>Learning Issues</h4>
+                    <p>Overcome learning obstacles and challenges</p>
+                    <a href="learning-issues.htm" class="btn">Find Solutions</a>
+                </div>
+                <div class="help-item">
+                    <h4>Accessibility</h4>
+                    <p>Make learning accessible for everyone</p>
+                    <a href="accessibility.htm" class="btn">Access Help</a>
+                </div>
+                <div class="help-item">
+                    <h4>Quiz Assistance</h4>
+                    <p>Help with assessments and evaluations</p>
+                    <a href="quiz-help.htm" class="btn">Get Help</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 SkillStream E-Learning Platform. All rights reserved.</p>
+            <p>Your success is our priority - we're here to help you overcome any learning challenge</p>
+        </div>
+    </footer>
+</body>
+</html>
