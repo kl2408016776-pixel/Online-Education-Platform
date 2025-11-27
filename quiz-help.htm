@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz and Assessment Help - SkillStream E-Learning Platform</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; }
+        body { background-color: #fefefe; color: #5a5a5a; line-height: 1.6; }
+        .container { max-width: 1200px; margin: 0 auto; padding: 0 20px; }
+        
+        header { background: linear-gradient(135deg, #f8f5f0 0%, #e8e0d5 100%); color: #6b625c; padding: 60px 0; text-align: center; border-bottom: 1px solid #e0d9d0; }
+        .header-content h1 { font-size: 2.5rem; margin-bottom: 15px; color: #8b7d6b; font-weight: 300; }
+        .header-content p { font-size: 1.2rem; margin-bottom: 25px; color: #7a6f63; }
+        .btn { display: inline-block; background: #c8b8a5; color: #fff; padding: 12px 30px; border-radius: 25px; text-decoration: none; font-weight: bold; transition: all 0.3s ease; border: 2px solid #c8b8a5; }
+        .btn:hover { background: transparent; color: #c8b8a5; transform: translateY(-2px); }
+        
+        nav { background: #fff; padding: 20px 0; box-shadow: 0 2px 10px rgba(0,0,0,0.1); }
+        .nav-links { display: flex; justify-content: center; list-style: none; flex-wrap: wrap; gap: 15px; }
+        .nav-links a { text-decoration: none; color: #8b7d6b; padding: 10px 20px; border-radius: 25px; transition: all 0.3s ease; }
+        .nav-links a:hover { background: #f8f5f0; color: #7a6a58; }
+        
+        .quiz-help-content { padding: 60px 0; background: #fcfaf7; }
+        .section-title { text-align: center; margin-bottom: 40px; font-size: 2rem; color: #8b7d6b; }
+        .help-intro { text-align: center; max-width: 800px; margin: 0 auto 50px; color: #7a6f63; font-size: 1.1rem; line-height: 1.8; }
+        
+        .help-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)); gap: 30px; margin-bottom: 50px; }
+        .help-card { background: white; padding: 30px; border-radius: 10px; box-shadow: 0 5px 15px rgba(0,0,0,0.1); transition: transform 0.3s ease; border-left: 4px solid #c8b8a5; }
+        .help-card:hover { transform: translateY(-5px); }
+        .help-card h3 { color: #8b7d6b; margin-bottom: 15px; font-size: 1.3rem; }
+        .tip-list { list-style: none; margin: 15px 0; }
+        .tip-list li { padding: 8px 0; border-bottom: 1px solid #f0f0f0; position: relative; padding-left: 25px; }
+        .tip-list li:before { content: "💡"; position: absolute; left: 0; }
+        
+        .resources-section { background: white; padding: 50px 0; }
+        .resources-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 25px; }
+        .resource-item { text-align: center; padding: 30px 20px; background: #f8f5f0; border-radius: 8px; transition: all 0.3s ease; }
+        .resource-item:hover { background: #e8e0d5; transform: translateY(-3px); }
+        .resource-item h4 { color: #8b7d6b; margin-bottom: 10px; }
+        
+        footer { background: #8b7d6b; color: #f8f5f0; text-align: center; padding: 30px 0; margin-top: 50px; }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="header-content">
+                <h1>Quiz and Assessment Help</h1>
+                <p>Master your assessments with effective preparation strategies</p>
+                <a href="resources.htm" class="btn">Practice Resources</a>
+            </div>
+        </div>
+    </header>
+
+    <nav>
+        <div class="container">
+            <ul class="nav-links">
+                <li><a href="index.htm">Home</a></li>
+                <li><a href="tips.htm">Tips & Tricks</a></li>
+                <li><a href="problems.htm">Problem-Solving</a></li>
+                <li><a href="catalog.htm">Course Catalog</a></li>
+                <li><a href="about.htm">About Us</a></li>
+                <li><a href="contact.htm">Contact Support</a></li>
+                <li><a href="admin.htm">Admin</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <section class="quiz-help-content">
+        <div class="container">
+            <h2 class="section-title">Assessment Preparation Guide</h2>
+            <div class="help-intro">
+                <p>Prepare effectively for quizzes and assessments with our comprehensive guide. Learn strategies for different question types and manage test anxiety.</p>
+            </div>
+
+            <div class="help-grid">
+                <div class="help-card">
+                    <h3>Multiple Choice Strategies</h3>
+                    <p>Approach multiple choice questions with confidence</p>
+                    <ul class="tip-list">
+                        <li>Read all options before selecting answer</li>
+                        <li>Eliminate obviously wrong choices first</li>
+                        <li>Watch for absolute words like "always" or "never"</li>
+                        <li>Manage your time effectively</li>
+                        <li>Review answers if time permits</li>
+                    </ul>
+                </div>
+                
+                <div class="help-card">
+                    <h3>Coding Assessments</h3>
+                    <p>Excel in practical coding tests and exercises</p>
+                    <ul class="tip-list">
+                        <li>Practice with sample coding problems</li>
+                        <li>Understand problem requirements completely</li>
+                        <li>Test your code with different inputs</li>
+                        <li>Write clean, readable code</li>
+                        <li>Comment your thought process</li>
+                    </ul>
+                </div>
+                
+                <div class="help-card">
+                    <h3>Time Management</h3>
+                    <p>Complete assessments within time limits</p>
+                    <ul class="tip-list">
+                        <li>Scan entire assessment first</li>
+                        <li>Answer easier questions first</li>
+                        <li>Allocate time based on question weight</li>
+                        <li>Don't spend too long on one question</li>
+                        <li>Save time for review</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="resources-section">
+        <div class="container">
+            <h2 class="section-title">Practice Resources</h2>
+            <div class="resources-grid">
+                <div class="resource-item">
+                    <h4>Sample Quizzes</h4>
+                    <p>Practice with sample questions and answers</p>
+                    <a href="resources.htm" class="btn" style="margin-top: 10px; display: inline-block;">Try Now</a>
+                </div>
+                
+                <div class="resource-item">
+                    <h4>Study Guides</h4>
+                    <p>Comprehensive guides for each course</p>
+                    <a href="resources.htm" class="btn" style="margin-top: 10px; display: inline-block;">Download</a>
+                </div>
+                
+                <div class="resource-item">
+                    <h4>Video Tutorials</h4>
+                    <p>Watch step-by-step solution guides</p>
+                    <a href="tutorials.htm" class="btn" style="margin-top: 10px; display: inline-block;">Watch</a>
+                </div>
+                
+                <div class="resource-item">
+                    <h4>Mock Exams</h4>
+                    <p>Simulate real assessment conditions</p>
+                    <a href="resources.htm" class="btn" style="margin-top: 10px; display: inline-block;">Practice</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 SkillStream E-Learning Platform. All rights reserved.</p>
+            <p>Your success in assessments reflects your learning journey</p>
+        </div>
+    </footer>
+</body>
+</html>
