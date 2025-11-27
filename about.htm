@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us - SkillStream E-Learning Platform</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        
+        body {
+            background-color: #fefefe;
+            color: #5a5a5a;
+            line-height: 1.6;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        /* Header Styles */
+        header {
+            background: linear-gradient(135deg, #f8f5f0 0%, #e8e0d5 100%);
+            color: #6b625c;
+            padding: 60px 0;
+            text-align: center;
+            border-bottom: 1px solid #e0d9d0;
+        }
+        
+        .header-content h1 {
+            font-size: 2.5rem;
+            margin-bottom: 15px;
+            color: #8b7d6b;
+            font-weight: 300;
+        }
+        
+        .header-content p {
+            font-size: 1.2rem;
+            margin-bottom: 25px;
+            color: #7a6f63;
+        }
+        
+        .btn {
+            display: inline-block;
+            background: #c8b8a5;
+            color: #fff;
+            padding: 12px 30px;
+            border-radius: 25px;
+            text-decoration: none;
+            font-weight: bold;
+            transition: all 0.3s ease;
+            border: 2px solid #c8b8a5;
+        }
+        
+        .btn:hover {
+            background: transparent;
+            color: #c8b8a5;
+            transform: translateY(-2px);
+        }
+        
+        /* Navigation */
+        nav {
+            background: #fff;
+            padding: 20px 0;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        
+        .nav-links {
+            display: flex;
+            justify-content: center;
+            list-style: none;
+            flex-wrap: wrap;
+            gap: 15px;
+        }
+        
+        .nav-links a {
+            text-decoration: none;
+            color: #8b7d6b;
+            padding: 10px 20px;
+            border-radius: 25px;
+            transition: all 0.3s ease;
+        }
+        
+        .nav-links a:hover {
+            background: #f8f5f0;
+            color: #7a6a58;
+        }
+        
+        /* About Content */
+        .about-content {
+            padding: 60px 0;
+            background: #fcfaf7;
+        }
+        
+        .section-title {
+            text-align: center;
+            margin-bottom: 40px;
+            font-size: 2rem;
+            color: #8b7d6b;
+        }
+        
+        .about-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 40px;
+            margin-bottom: 50px;
+        }
+        
+        .about-card {
+            background: white;
+            padding: 40px 30px;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            text-align: center;
+            transition: transform 0.3s ease;
+        }
+        
+        .about-card:hover {
+            transform: translateY(-5px);
+        }
+        
+        .about-card h3 {
+            color: #8b7d6b;
+            margin-bottom: 20px;
+            font-size: 1.5rem;
+        }
+        
+        .about-card p {
+            color: #666;
+            line-height: 1.8;
+        }
+        
+        .mission-vision {
+            background: white;
+            padding: 50px 0;
+        }
+        
+        .mv-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+            gap: 30px;
+        }
+        
+        .mv-item {
+            padding: 30px;
+            background: #f8f5f0;
+            border-radius: 8px;
+        }
+        
+        .mv-item h3 {
+            color: #8b7d6b;
+            margin-bottom: 15px;
+            font-size: 1.4rem;
+        }
+        
+        /* Team Section */
+        .team-section {
+            padding: 60px 0;
+            background: #fcfaf7;
+        }
+        
+        .team-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+        }
+        
+        .team-member {
+            text-align: center;
+            padding: 30px;
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+        
+        .team-member h4 {
+            color: #8b7d6b;
+            margin-bottom: 10px;
+        }
+        
+        .team-role {
+            color: #a89987;
+            font-style: italic;
+            margin-bottom: 15px;
+        }
+        
+        /* Footer */
+        footer {
+            background: #8b7d6b;
+            color: #f8f5f0;
+            text-align: center;
+            padding: 30px 0;
+            margin-top: 50px;
+        }
+    </style>
+</head>
+<body>
+    <!-- Header Section -->
+    <header>
+        <div class="container">
+            <div class="header-content">
+                <h1>About SkillStream</h1>
+                <p>Transforming education through innovative e-learning solutions</p>
+                <a href="catalog.htm" class="btn">Explore Our Courses</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Navigation -->
+    <nav>
+        <div class="container">
+            <ul class="nav-links">
+                <li><a href="index.htm">Home</a></li>
+                <li><a href="tips.htm">Tips & Tricks</a></li>
+                <li><a href="problems.htm">Problem-Solving</a></li>
+                <li><a href="catalog.htm">Course Catalog</a></li>
+                <li><a href="about.htm">About Us</a></li>
+                <li><a href="contact.htm">Contact Support</a></li>
+                <li><a href="admin.php">Admin</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- About Content Section -->
+    <section class="about-content">
+        <div class="container">
+            <h2 class="section-title">Our Story</h2>
+            <div class="about-grid">
+                <div class="about-card">
+                    <h3>Who We Are</h3>
+                    <p>SkillStream is a leading e-learning platform dedicated to providing high-quality, accessible education to learners worldwide. We believe in the power of technology to transform learning experiences.</p>
+                </div>
+                
+                <div class="about-card">
+                    <h3>What We Do</h3>
+                    <p>We offer comprehensive online courses, interactive learning modules, and professional certification programs designed to help individuals and organizations achieve their learning objectives.</p>
+                </div>
+                
+                <div class="about-card">
+                    <h3>Our Impact</h3>
+                    <p>Since our founding, we've helped over 50,000 learners acquire new skills, advance their careers, and achieve personal growth through our innovative educational platform.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Mission & Vision Section -->
+    <section class="mission-vision">
+        <div class="container">
+            <div class="mv-grid">
+                <div class="mv-item">
+                    <h3>Our Mission</h3>
+                    <p>To make quality education accessible to everyone, everywhere through innovative technology and engaging learning experiences that empower individuals to reach their full potential.</p>
+                </div>
+                
+                <div class="mv-item">
+                    <h3>Our Vision</h3>
+                    <p>To become the world's most trusted e-learning platform, recognized for transforming lives through education and building a global community of lifelong learners.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Team Section -->
+    <section class="team-section">
+        <div class="container">
+            <h2 class="section-title">Our Team</h2>
+            <div class="team-grid">
+                <div class="team-member">
+                    <h4>Dr. Amirah Nabilah</h4>
+                    <p class="team-role">Chief Learning Officer</p>
+                    <p>Education specialist with 15+ years experience in curriculum development.</p>
+                </div>
+                
+                <div class="team-member">
+                    <h4>Azim Adam</h4>
+                    <p class="team-role">Technology Director</p>
+                    <p>Expert in educational technology and platform development.</p>
+                </div>
+                
+                <div class="team-member">
+                    <h4>Muhammad Irfan</h4>
+                    <p class="team-role">Content Manager</p>
+                    <p>Passionate about creating engaging and effective learning materials.</p>
+                </div>
+                
+                <div class="team-member">
+                    <h4>Arissa Khairani</h4>
+                    <p class="team-role">Student Success</p>
+                    <p>Dedicated to ensuring every learner achieves their goals.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 SkillStream E-Learning Platform. All rights reserved.</p>
+            <p>Committed to excellence in online education</p>
+        </div>
+    </footer>
+</body>
+</html>
