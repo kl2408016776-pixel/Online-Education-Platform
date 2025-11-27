@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Course Catalog - SkillStream E-Learning Platform</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        
+        body {
+            background-color: #fefefe;
+            color: #5a5a5a;
+            line-height: 1.6;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        /* Header Styles */
+        header {
+            background: linear-gradient(135deg, #f8f5f0 0%, #e8e0d5 100%);
+            color: #6b625c;
+            padding: 60px 0;
+            text-align: center;
+            border-bottom: 1px solid #e0d9d0;
+        }
+        
+        .header-content h1 {
+            font-size: 2.5rem;
+            margin-bottom: 15px;
+            color: #8b7d6b;
+            font-weight: 300;
+        }
+        
+        .header-content p {
+            font-size: 1.2rem;
+            margin-bottom: 25px;
+            color: #7a6f63;
+        }
+        
+        .btn {
+            display: inline-block;
+            background: #c8b8a5;
+            color: #fff;
+            padding: 12px 30px;
+            border-radius: 25px;
+            text-decoration: none;
+            font-weight: bold;
+            transition: all 0.3s ease;
+            border: 2px solid #c8b8a5;
+        }
+        
+        .btn:hover {
+            background: transparent;
+            color: #c8b8a5;
+            transform: translateY(-2px);
+        }
+        
+        /* Navigation */
+        nav {
+            background: #fff;
+            padding: 20px 0;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        
+        .nav-links {
+            display: flex;
+            justify-content: center;
+            list-style: none;
+            flex-wrap: wrap;
+            gap: 15px;
+        }
+        
+        .nav-links a {
+            text-decoration: none;
+            color: #8b7d6b;
+            padding: 10px 20px;
+            border-radius: 25px;
+            transition: all 0.3s ease;
+        }
+        
+        .nav-links a:hover {
+            background: #f8f5f0;
+            color: #7a6a58;
+        }
+        
+        /* Fix default link colors */
+        a {
+            color: #8b7d6b;
+            text-decoration: none;
+        }
+        
+        a:hover {
+            color: #7a6a58;
+        }
+        
+        /* Catalog Content */
+        .catalog-content {
+            padding: 60px 0;
+            background: #fcfaf7;
+        }
+        
+        .section-title {
+            text-align: center;
+            margin-bottom: 40px;
+            font-size: 2rem;
+            color: #8b7d6b;
+        }
+        
+        /* Search & Filter */
+        .search-filter {
+            background: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            margin-bottom: 40px;
+        }
+        
+        .search-box {
+            display: flex;
+            gap: 15px;
+            margin-bottom: 20px;
+        }
+        
+        .search-box input {
+            flex: 1;
+            padding: 12px 20px;
+            border: 1px solid #e0d9d0;
+            border-radius: 25px;
+            font-size: 1rem;
+        }
+        
+        .filter-options {
+            display: flex;
+            gap: 15px;
+            flex-wrap: wrap;
+        }
+        
+        .filter-btn {
+            padding: 8px 20px;
+            border: 1px solid #e0d9d0;
+            border-radius: 20px;
+            background: white;
+            color: #8b7d6b;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+        
+        .filter-btn:hover, .filter-btn.active {
+            background: #c8b8a5;
+            color: white;
+            border-color: #c8b8a5;
+        }
+        
+        /* Courses Grid */
+        .courses-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 30px;
+            margin-bottom: 50px;
+        }
+        
+        .course-card {
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease;
+            overflow: hidden;
+        }
+        
+        .course-card:hover {
+            transform: translateY(-5px);
+        }
+        
+        .course-image {
+            height: 200px;
+            background: #e8e0d5;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 1.5rem;
+            font-weight: bold;
+        }
+        
+        .course-content {
+            padding: 25px;
+        }
+        
+        .course-category {
+            background: #f8f5f0;
+            color: #8b7d6b;
+            padding: 5px 15px;
+            border-radius: 15px;
+            font-size: 0.9rem;
+            display: inline-block;
+            margin-bottom: 15px;
+        }
+        
+        .course-card h3 {
+            color: #8b7d6b;
+            margin-bottom: 10px;
+            font-size: 1.3rem;
+        }
+        
+        .course-card p {
+            color: #666;
+            margin-bottom: 20px;
+            font-size: 0.95rem;
+        }
+        
+        .course-meta {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 20px;
+            font-size: 0.9rem;
+            color: #7a6f63;
+        }
+        
+        .enroll-btn {
+            background: #a89987;
+            border-color: #a89987;
+            width: 100%;
+            text-align: center;
+        }
+        
+        /* Footer */
+        footer {
+            background: #8b7d6b;
+            color: #f8f5f0;
+            text-align: center;
+            padding: 30px 0;
+            margin-top: 50px;
+        }
+    </style>
+</head>
+<body>
+    <!-- Header Section -->
+    <header>
+        <div class="container">
+            <div class="header-content">
+                <h1>Course Catalog</h1>
+                <p>Discover comprehensive courses designed for your professional growth</p>
+                <a href="#courses" class="btn">Browse Courses</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Navigation -->
+    <nav>
+        <div class="container">
+            <ul class="nav-links">
+                <li><a href="index.htm">Home</a></li>
+                <li><a href="tips.htm">Tips & Tricks</a></li>
+                <li><a href="problems.htm">Problem-Solving</a></li>
+                <li><a href="catalog.htm">Course Catalog</a></li>
+                <li><a href="about.htm">About Us</a></li>
+                <li><a href="contact.htm">Contact Support</a></li>
+                <li><a href="admin.php">Admin</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Catalog Content Section -->
+    <section class="catalog-content">
+        <div class="container">
+            <!-- Search & Filter -->
+            <div class="search-filter">
+                <div class="search-box">
+                    <input type="text" placeholder="Search courses...">
+                    <button class="btn">Search</button>
+                </div>
+                <div class="filter-options">
+                    <button class="filter-btn active">All Courses</button>
+                    <button class="filter-btn">Web Development</button>
+                    <button class="filter-btn">Data Science</button>
+                    <button class="filter-btn">Business</button>
+                    <button class="filter-btn">Design</button>
+                    <button class="filter-btn">Certification</button>
+                </div>
+            </div>
+
+            <!-- Courses Grid -->
+            <h2 class="section-title" id="courses">Featured Courses</h2>
+            <div class="courses-grid">
+                <div class="course-card">
+                    <div class="course-image">Web Dev</div>
+                    <div class="course-content">
+                        <span class="course-category">Web Development</span>
+                        <h3>Full Stack Web Development</h3>
+                        <p>Master front-end and back-end technologies to build complete web applications from scratch.</p>
+                        <div class="course-meta">
+                            <span>⭐ 4.8 (1.2k reviews)</span>
+                            <span>🕒 12 weeks</span>
+                        </div>
+                        <a href="#" class="btn enroll-btn">Enroll Now</a>
+                    </div>
+                </div>
+                
+                <div class="course-card">
+                    <div class="course-image">Data Science</div>
+                    <div class="course-content">
+                        <span class="course-category">Data Science</span>
+                        <h3>Data Analysis with Python</h3>
+                        <p>Learn to analyze and visualize data using Python libraries like Pandas, NumPy, and Matplotlib.</p>
+                        <div class="course-meta">
+                            <span>⭐ 4.7 (890 reviews)</span>
+                            <span>🕒 8 weeks</span>
+                        </div>
+                        <a href="#" class="btn enroll-btn">Enroll Now</a>
+                    </div>
+                </div>
+                
+                <div class="course-card">
+                    <div class="course-image">Business</div>
+                    <div class="course-content">
+                        <span class="course-category">Business</span>
+                        <h3>Digital Marketing Strategy</h3>
+                        <p>Develop comprehensive digital marketing campaigns and measure their effectiveness.</p>
+                        <div class="course-meta">
+                            <span>⭐ 4.6 (750 reviews)</span>
+                            <span>🕒 6 weeks</span>
+                        </div>
+                        <a href="#" class="btn enroll-btn">Enroll Now</a>
+                    </div>
+                </div>
+
+                <div class="course-card">
+                    <div class="course-image">UI/UX Design</div>
+                    <div class="course-content">
+                        <span class="course-category">Design</span>
+                        <h3>UI/UX Design Fundamentals</h3>
+                        <p>Create user-centered designs with principles of usability and visual design.</p>
+                        <div class="course-meta">
+                            <span>⭐ 4.9 (950 reviews)</span>
+                            <span>🕒 10 weeks</span>
+                        </div>
+                        <a href="#" class="btn enroll-btn">Enroll Now</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 SkillStream E-Learning Platform. All rights reserved.</p>
+            <p>Expand your knowledge with our comprehensive course catalog</p>
+        </div>
+    </footer>
+</body>
+</html>
