@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Certification Programs - SkillStream E-Learning Platform</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; }
+        body { background-color: #fefefe; color: #5a5a5a; line-height: 1.6; }
+        .container { max-width: 1200px; margin: 0 auto; padding: 0 20px; }
+        
+        header { background: linear-gradient(135deg, #f8f5f0 0%, #e8e0d5 100%); color: #6b625c; padding: 60px 0; text-align: center; border-bottom: 1px solid #e0d9d0; }
+        .header-content h1 { font-size: 2.5rem; margin-bottom: 15px; color: #8b7d6b; font-weight: 300; }
+        .header-content p { font-size: 1.2rem; margin-bottom: 25px; color: #7a6f63; }
+        .btn { display: inline-block; background: #c8b8a5; color: #fff; padding: 12px 30px; border-radius: 25px; text-decoration: none; font-weight: bold; transition: all 0.3s ease; border: 2px solid #c8b8a5; }
+        .btn:hover { background: transparent; color: #c8b8a5; transform: translateY(-2px); }
+        
+        nav { background: #fff; padding: 20px 0; box-shadow: 0 2px 10px rgba(0,0,0,0.1); }
+        .nav-links { display: flex; justify-content: center; list-style: none; flex-wrap: wrap; gap: 15px; }
+        .nav-links a { text-decoration: none; color: #8b7d6b; padding: 10px 20px; border-radius: 25px; transition: all 0.3s ease; }
+        .nav-links a:hover { background: #f8f5f0; color: #7a6a58; }
+        
+        .certification-content { padding: 60px 0; background: #fcfaf7; }
+        .section-title { text-align: center; margin-bottom: 40px; font-size: 2rem; color: #8b7d6b; }
+        .cert-intro { text-align: center; max-width: 800px; margin: 0 auto 50px; color: #7a6f63; font-size: 1.1rem; line-height: 1.8; }
+        
+        .programs-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)); gap: 30px; margin-bottom: 50px; }
+        .program-card { background: white; border-radius: 10px; box-shadow: 0 5px 15px rgba(0,0,0,0.1); transition: transform 0.3s ease; overflow: hidden; }
+        .program-card:hover { transform: translateY(-5px); }
+        .program-header { background: linear-gradient(135deg, #c8b8a5 0%, #a89987 100%); color: white; padding: 25px; text-align: center; }
+        .program-header h3 { font-size: 1.4rem; margin-bottom: 10px; }
+        .program-level { background: rgba(255,255,255,0.2); padding: 5px 15px; border-radius: 15px; font-size: 0.9rem; display: inline-block; }
+        .program-content { padding: 25px; }
+        .program-features { list-style: none; margin: 20px 0; }
+        .program-features li { padding: 8px 0; border-bottom: 1px solid #f0f0f0; position: relative; padding-left: 25px; }
+        .program-features li:before { content: "✅"; position: absolute; left: 0; }
+        .program-meta { display: flex; justify-content: space-between; align-items: center; margin-top: 20px; font-size: 0.9rem; color: #7a6f63; }
+        
+        .benefits-section { background: white; padding: 50px 0; }
+        .benefits-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 25px; }
+        .benefit-item { text-align: center; padding: 30px 20px; background: #f8f5f0; border-radius: 8px; transition: all 0.3s ease; }
+        .benefit-item:hover { background: #e8e0d5; transform: translateY(-3px); }
+        .benefit-item h4 { color: #8b7d6b; margin-bottom: 10px; }
+        
+        footer { background: #8b7d6b; color: #f8f5f0; text-align: center; padding: 30px 0; margin-top: 50px; }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="header-content">
+                <h1>Certification Programs</h1>
+                <p>Validate your skills with industry-recognized certifications</p>
+                <a href="catalog.htm" class="btn">Browse Programs</a>
+            </div>
+        </div>
+    </header>
+
+
+    <nav>
+        <div class="container">
+            <ul class="nav-links">
+                <li><a href="index.htm">Home</a></li>
+                <li><a href="tips.htm">Tips & Tricks</a></li>
+                <li><a href="problems.htm">Problem-Solving</a></li>
+                <li><a href="catalog.htm">Course Catalog</a></li>
+                <li><a href="about.htm">About Us</a></li>
+                <li><a href="contact.htm">Contact Support</a></li>
+                <li><a href="admin.htm">Admin</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <section class="certification-content">
+        <div class="container">
+            <h2 class="section-title">Professional Certification Programs</h2>
+            <div class="cert-intro">
+                <p>Earn recognized certifications that demonstrate your expertise to employers and advance your career in the tech industry.</p>
+            </div>
+
+            <div class="programs-grid">
+                <div class="program-card">
+                    <div class="program-header">
+                        <h3>Full Stack Web Developer</h3>
+                        <span class="program-level">Professional</span>
+                    </div>
+                    <div class="program-content">
+                        <p>Comprehensive certification covering frontend and backend development technologies.</p>
+                        <ul class="program-features">
+                            <li>HTML5, CSS3, JavaScript mastery</li>
+                            <li>React.js or Vue.js framework</li>
+                            <li>Node.js and Express.js</li>
+                            <li>Database design with MongoDB</li>
+                            <li>REST API development</li>
+                            <li>Final capstone project</li>
+                        </ul>
+                        <div class="program-meta">
+                            <span>🕒 6 months</span>
+                            <span>📊 Portfolio Required</span>
+                        </div>
+                        <a href="#" class="btn" style="width: 100%; text-align: center; margin-top: 15px; display: block;">Enroll Now</a>
+                    </div>
+                </div>
+                
+                <div class="program-card">
+                    <div class="program-header">
+                        <h3>UX/UI Design Professional</h3>
+                        <span class="program-level">Advanced</span>
+                    </div>
+                    <div class="program-content">
+                        <p>Master user experience and interface design principles with hands-on projects.</p>
+                        <ul class="program-features">
+                            <li>User research methods</li>
+                            <li>Wireframing and prototyping</li>
+                            <li>Interaction design principles</li>
+                            <li>Design system creation</li>
+                            <li>Usability testing</li>
+                            <li>Design portfolio development</li>
+                        </ul>
+                        <div class="program-meta">
+                            <span>🕒 4 months</span>
+                            <span>📊 Design Portfolio</span>
+                        </div>
+                        <a href="#" class="btn" style="width: 100%; text-align: center; margin-top: 15px; display: block;">Enroll Now</a>
+                    </div>
+                </div>
+                
+                <div class="program-card">
+                    <div class="program-header">
+                        <h3>Data Analytics Specialist</h3>
+                        <span class="program-level">Intermediate</span>
+                    </div>
+                    <div class="program-content">
+                        <p>Learn to analyze and visualize data to drive business decisions and insights.</p>
+                        <ul class="program-features">
+                            <li>Python for data analysis</li>
+                            <li>SQL database queries</li>
+                            <li>Data visualization tools</li>
+                            <li>Statistical analysis</li>
+                            <li>Machine learning basics</li>
+                            <li>Real-world data projects</li>
+                        </ul>
+                        <div class="program-meta">
+                            <span>🕒 5 months</span>
+                            <span>📊 Case Studies</span>
+                        </div>
+                        <a href="#" class="btn" style="width: 100%; text-align: center; margin-top: 15px; display: block;">Enroll Now</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="benefits-section">
+        <div class="container">
+            <h2 class="section-title">Certification Benefits</h2>
+            <div class="benefits-grid">
+                <div class="benefit-item">
+                    <h4>Career Advancement</h4>
+                    <p>Stand out in job applications and promotions</p>
+                </div>
+                
+                <div class="benefit-item">
+                    <h4>Skill Validation</h4>
+                    <p>Officially validate your expertise to employers</p>
+                </div>
+                
+                <div class="benefit-item">
+                    <h4>Industry Recognition</h4>
+                    <p>Gain recognition in the professional community</p>
+                </div>
+                
+                <div class="benefit-item">
+                    <h4>Higher Earning Potential</h4>
+                    <p>Increase your value in the job market</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 SkillStream E-Learning Platform. All rights reserved.</p>
+            <p>Certify your skills and accelerate your career growth</p>
+        </div>
+    </footer>
+</body>
+</html>
